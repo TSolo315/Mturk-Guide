@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138864817-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138864817-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn how perform AHK commands repeatedly using loops.">
+    <title>Loops</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/prism.js"></script>
+  </head>
+  <body class="main">
+
+<!--Navigation Bar-->
+
+<nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+      <img src="images/mglogo.png" width="120" height="30">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBase">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBase" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">
+        Home
+      </a>
+
+      <a class="navbar-item" href="getting-started.html">
+        Getting Started
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="scripts.html">
+          Scripts
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="scripts.html">
+            Script Guide
+          </a>
+          <a class="navbar-item" href="primary-scripts.html">
+            Primary Scripts
+          </a>
+          <a class="navbar-item" href="accessory-scripts.html">
+            Accessory Scripts
+          </a>
+        </div>
+      </div>
+      <a class="navbar-item" href="leveling-up.html">
+        Leveling Up
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link is-active" href="autohotkey-tutorials-overview.html">
+          Tutorials
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="autohotkey-tutorials-overview.html">
+            AutoHotkey
+          </a>
+        </div>
+      </div>
+
+      <a class="navbar-item" href="approval-rating-calculator.html">
+        Approval Rating Calculator
+      </a>
+
+    </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a id="contact-me" class="button is-light" href="contact-me.html">
+              <span class="icon">
+                <i class="fa fa-envelope fa-lg"></i>
+              </span>
+              &nbsp;&nbsp;Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Burger JScript -->
+  <script type="text/javascript">
+    (function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#'+burger.dataset.target);
+
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
+
+<!-- Breadcrumb -->
+
+<section class="section">
+  <div class="container">
+      <nav class="breadcrumb add-extra-padding-top" aria-label="breadcrumbs">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="autohotkey-tutorials-overview.html">Tutorials for Turkers: AutoHotkey</a></li>
+              <li class="is-active"><a href="#" aria-current="page">Loops</a></li>
+          </ul>
+      </nav>
+  </div>
+</section>
+
+<!-- Author -->
+
+<section class="section no-padding-horizontal no-padding-vertical">
+    <div class="container">
+        <article class="media center-it">
+            <figure class="media-left">
+                <figure class="image is-64x64 no-margin-horizontal">
+                    <img src="images/testa6464.png">
+                </figure>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>TSolo315</strong>
+                        <a href="https://www.mturkcrowd.com/members/tsolo315.27/">MturkCrowd</a><br>
+                        <span class="has-text-grey">Six years of turking experience<br>
+                        <time datetime="2019-09-10">Published: 10/09/2019</time></span>
+                    </p>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- Content -->
+
+<section class="section has-background-grey-lighter add-flex no-padding-top">
+    <div class="container">
+        <h1 class="title">Loops</h1>
+        <p class="subtitle">Repeat commands</p>
+        <div class="content">
+        <div class="numberCircle">1</div> <p class="tutorialText">What is a Loop?</p><br />
+        <p class="tutorialFollow">At this point you have learned enough to be able to tackle most problems you will run across when trying to create a script to make HITs more efficient. This tutorial and future tutorials will cover topics that either make things easier or provide extra versatility. Loops can make your life easier by allowing you to repeat a group of commands a specified number of times. Loops follow the format <b>Loop <i>count</i> {code}</b>. Here is an example:</p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+f1::
+Loop 4 {
+  sendinput this will be sent four times.
+}
+return
+</code>
+</pre>
+</div>
+        <p class="tutorialFollow">The count provided can be a variable, allowing you to loop a dynamic number of times.</p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+^1::
+Loop %numberOfEntries% {
+  sendinput this will be sent the number of times the variable numberOfEntries is equal to.
+}
+return
+</code>
+</pre>
+</div>
+        <p class="tutorialFollow">Every time you go through the code of a loop statement you "iterate" over the loop code -- so going through the loop's code is know as an "iteration." In the first example above with a count of 4, there would be four iterations (you loop through the code four times.)</p>
+        <div class="numberCircle">2</div> <p class="tutorialText">Break and Continue</p><br />
+        <p class="tutorialFollow">There are two special commands that can be used within loops.</p>
+        <div class="content">
+          <ul>
+            <li class="tutorialFollow">When AHK encounters the break command, it will immediately exit the loop -- regardless of how many iterations it had gone through so far.</li>
+            <li class="tutorialFollow">When AHK encounters the continue command, it will skip the rest of the code in the current loop iteration and jump back to the top of the loop statement, starting the next iteration.</li>
+          </ul>
+        </div>
+        <p class="tutorialFollow">Here is an example using break and continue:</p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+^1::
+count := 0
+Loop 30 {
+  count += 1
+  if (count < 10) 
+  {
+    continue ; skip the rest of the loop's code and jump to the next iteration.
+  }
+  if (count >= 10 and count < 25)
+  {
+    sendinput %count% ; send count variable
+    sendinput `r ; line break
+    continue ; skip the rest of the loop's code and jump to the next iteration.
+  }
+  if (count >= 25)
+  {
+    sendinput count has reached 25
+    sendinput `r ; line break
+    break ; break out of the loop completely.
+  }
+}
+sendinput Loop Terminated.
+return
+</code>
+</pre>
+</div>
+        <div class="numberCircle">3</div> <p class="tutorialText">A_Index</p><br />
+        <p class="tutorialFollow">A_Index is a special variable that keeps track of what iteration you are on in the current loop. It starts at one and counts up every time you go through the code in a loop statement. Here is the same example using A_Index:</p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+    ^1::
+    Loop 30 {
+      if (A_index < 10) 
+      {
+        continue ; skip the rest of the loop's code and jump to the next iteration.
+      }
+      if (A_index >= 10 and A_index < 25)
+      {
+        sendinput %A_index% ; send the number of the current iteration.
+        sendinput `r ; line break.
+        continue ; skip the rest of the loop's code and jump to the next iteration.
+      }
+      if (A_index >= 25)
+      {
+        sendinput count has reached 25
+        sendinput `r ; line break.
+        break ; break out of the loop completely.
+      }
+    }
+    sendinput Loop Terminated.
+    return
+</code>
+</pre>
+</div>
+        <div class="numberCircle">4</div> <p class="tutorialText">While Loop</p><br />
+        <p class="tutorialFollow">A while loop follows the format <b>While (expression) {code}</b>. Code in a while loop will continue to run until the provided expression evaluates to false. You can make an infinite while loop by using <b>While True</b> and then by creating a condition to exit the loop with a break command. Examples:</p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+    ^1::
+    While (A_Index < 20) { ; Loop will stop when A_Index reaches 20.
+      sendinput %A_Index% `r
+    }
+    return
+
+    ^2::
+    While True { ; Loop will run until a break command is reached.
+      sendinput this loop has ran %A_Index% times `r
+      if (A_Index > 22) 
+      {
+        sendinput Iteration Limit Reached
+        break
+      }
+    }
+    return
+</code>
+</pre>
+</div>
+        <a class="button is-dark is-medium is-pulled-right" href="">Next Tutorial: Coming Soon</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+
+  <footer class="footer">
+      <div class="content has-text-centered has-text-grey-lighter">
+        <p>
+          <strong id="footer-title">Mturk Guide</strong> by <a href="https://www.mturkcrowd.com/members/tsolo315.27/" target="_blank">TSolo315</a>. 2019 © All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+  </body>
+</html>

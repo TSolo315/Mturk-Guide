@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138864817-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138864817-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn how to download and install AutoHotkey.">
+    <title>Downloading and Installing AutoHotkey Tutorial</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body class="main">
+
+<!--Navigation Bar-->
+
+<nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+      <img src="images/mglogo.png" width="120" height="30">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBase">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBase" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">
+        Home
+      </a>
+
+      <a class="navbar-item" href="getting-started.html">
+        Getting Started
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="scripts.html">
+          Scripts
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="scripts.html">
+            Script Guide
+          </a>
+          <a class="navbar-item" href="primary-scripts.html">
+            Primary Scripts
+          </a>
+          <a class="navbar-item" href="accessory-scripts.html">
+            Accessory Scripts
+          </a>
+        </div>
+      </div>
+      <a class="navbar-item" href="leveling-up.html">
+        Leveling Up
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link is-active" href="autohotkey-tutorials-overview.html">
+          Tutorials
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="autohotkey-tutorials-overview.html">
+            AutoHotkey
+          </a>
+        </div>
+      </div>
+
+      <a class="navbar-item" href="approval-rating-calculator.html">
+        Approval Rating Calculator
+      </a>
+
+    </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a id="contact-me" class="button is-light" href="contact-me.html">
+              <span class="icon">
+                <i class="fa fa-envelope fa-lg"></i>
+              </span>
+              &nbsp;&nbsp;Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Burger JScript -->
+  <script type="text/javascript">
+    (function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#'+burger.dataset.target);
+
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
+
+<!-- Breadcrumb -->
+
+<section class="section">
+  <div class="container">
+      <nav class="breadcrumb add-extra-padding-top" aria-label="breadcrumbs">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="autohotkey-tutorials-overview.html">Tutorials for Turkers: AutoHotkey</a></li>
+              <li class="is-active"><a href="#" aria-current="page">Downloading and Installing AutoHotkey</a></li>
+          </ul>
+      </nav>
+  </div>
+</section>
+
+<!-- Author -->
+
+<section class="section no-padding-horizontal no-padding-vertical">
+    <div class="container">
+        <article class="media center-it">
+            <figure class="media-left">
+                <figure class="image is-64x64 no-margin-horizontal">
+                    <img src="images/testa6464.png">
+                </figure>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>TSolo315</strong>
+                        <a href="https://www.mturkcrowd.com/members/tsolo315.27/">MturkCrowd</a><br>
+                        <span class="has-text-grey">Six years of turking experience<br>
+                        <time datetime="2019-05-15">Published: 05/15/2019</time></span>
+                    </p>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- Content -->
+
+<section class="section has-background-grey-lighter add-flex no-padding-top">
+    <div class="container">
+        <h1 class="title">Downloading and Installing AutoHotkey</h1>
+        <p class="subtitle">Learn how to install AutoHotkey on your computer</p>
+        <div class="content">
+        <div class="numberCircle">1</div> <p class="tutorialText">Visit the AutoHotkey homepage at <a href="https://autohotkey.com/" target="_blank">https://autohotkey.com</a>.</p><br />
+        <div class="numberCircle">2</div> <p class="tutorialText">Click the download button and download the current version.</p><br />
+        <figure class="image is-2by1 ">
+            <img src="images/autohotkey_download.png">
+        </figure>
+        <div class="numberCircle">3</div> <p class="tutorialText">Run the installation wizard and click through it until you reach the install button. </p><br /> <p class="tutorialFollow">Choose Unicode over ANSI if prompted.</p>
+        <div class="numberCircle ">4</div> <p class="tutorialText">Click install.</p><br />
+        <a class="button is-dark is-medium is-pulled-right" href="writing-your-first-autohotkey-script-tutorial.html">Next Tutorial: Your First Script</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+
+  <footer class="footer">
+      <div class="content has-text-centered has-text-grey-lighter">
+        <p>
+          <strong id="footer-title">Mturk Guide</strong> by <a href="https://www.mturkcrowd.com/members/tsolo315.27/" target="_blank">TSolo315</a>. 2019 © All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  
+  <!-- <script src="js/jquery-3.4.0.min.js"></script>
+  <script src="js/test.js"></script> -->
+  </body>
+</html>

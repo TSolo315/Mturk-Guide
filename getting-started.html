@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138864817-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138864817-1');
+    </script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A beginner's guide to working on Mechanical Turk. Learn how to find the best HITs MTurk has to offer and how to avoid common mistakes.">
+    <title>Getting Started with Mechanical Turk</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body class="main">
+
+<!--Navigation Bar-->
+
+<nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+      <img src="images/mglogo.png" width="120" height="30">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBase">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBase" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">
+        Home
+      </a>
+
+      <a class="navbar-item is-active" href="getting-started.html">
+        Getting Started
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="scripts.html">
+          Scripts
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="scripts.html">
+            Script Guide
+          </a>
+          <a class="navbar-item" href="primary-scripts.html">
+            Primary Scripts
+          </a>
+          <a class="navbar-item" href="accessory-scripts.html">
+            Accessory Scripts
+          </a>
+        </div>
+      </div>
+      <a class="navbar-item" href="leveling-up.html">
+        Leveling Up
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="autohotkey-tutorials-overview.html">
+          Tutorials
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="autohotkey-tutorials-overview.html">
+            AutoHotkey
+          </a>
+        </div>
+      </div>
+
+      <a class="navbar-item" href="approval-rating-calculator.html">
+        Approval Rating Calculator
+      </a>
+
+    </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a id="contact-me" class="button is-light" href="contact-me.html">
+              <span class="icon">
+                <i class="fa fa-envelope fa-lg"></i>
+              </span>
+              &nbsp;&nbsp;Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Burger JScript -->
+  <script type="text/javascript">
+    (function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#'+burger.dataset.target);
+
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
+
+<!-- Breadcrumb -->
+
+    <section class="section">
+        <div class="container">
+            <nav class="breadcrumb add-extra-padding-top" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="is-active"><a href="#" aria-current="page">Getting Started with Mechanical Turk</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+<!-- Author -->
+
+    <section class="section no-padding-horizontal no-padding-vertical">
+        <div class="container">
+            <article class="media center-it">
+                <figure class="media-left">
+                    <figure class="image is-64x64 no-margin-horizontal">
+                        <img src="images/testa6464.png">
+                    </figure>
+                </figure>
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>TSolo315</strong>
+                            <a href="https://www.mturkcrowd.com/members/tsolo315.27/">MturkCrowd</a><br>
+                            <span class="has-text-grey">Six years of turking experience<br>
+                            <time datetime="2019-04-20">Published: 04/20/2019</time></span>
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+<!-- Content -->
+
+<section class="section has-background-grey-lighter add-flex no-padding-top">
+    <div class="container">
+        <h1 class="title">Getting Started with Mechanical Turk</h1>
+        <p class="subtitle">Where do I even start?</p>
+        <p>Starting out on Mechanical Turk can be tough. There is a lot of bad work to wade through and without the necessary knowledge or tools that bad work may be all you can see. In this guide I will outline the basics of Mechanical Turk and will help you discover how to avoid the garbage and how to find the tasks worth working on. Before we start, the following is going to assume you already have an activated MTurk account and a valid Amazon Payments account. If you haven't signed up for an account yet, do so now (they can take up to a week to be approved).<br /><br />
+        First, I will define a few frequently used terms: </p><br />
+        <div class="notification is-warning definitions no-padding-bottom">
+        <div class="columns">
+          <div class="column">
+            <dl class="is-family-sans-serif"> 
+              <dt>Mturk:</dt>
+              <dd>Short for Mechanical Turk.</dd>
+              <dt>Turker:</dt>
+              <dd>A worker on Mechanical Turk.</dd>
+              <dt>Requester:</dt>
+              <dd>Someone who posts work.</dd>
+              <dt>Rejection/Reject:</dt>
+              <dd>When a requester doesn't accept the work you submitted and "rejects" the HIT. You do not get paid.</dd>
+              <dt>Qualification (qual):</dt>
+              <dd>Requesters can place a qualification on a HIT to exclude those who do not have the qualification from working on it. Workers can be then be given this qualification so they can work on the HIT.</dd>
+            </dl>
+          </div>
+          <div class="column">
+            <dl class="is-family-sans-serif">
+              <dt>Turking:</dt>
+              <dd>Working on Mechanical Turk.</dd> 
+              <dt>HIT:</dt>
+              <dd>Short for "Human Intelligence Task." A task done on Mturk for payment.</dd>
+              <dt>Dashboard:</dt>
+              <dd>A page that displays various statistics regarding your Mturk account. Your dashboard can be found <a href="https://worker.mturk.com/dashboard" target="_blank">here</a>.</dd>
+              <dt>Approval Rating:</dt>
+              <dd>The ratio of your accepted HITs to rejected HITs. This is displayed on your dashboard.</dd>
+              <dt>Batch:</dt>
+              <dd>A set of HITs grouped together, of which you can do several.</dd>
+            </dl>
+        </div></div></div><br />
+        <p>
+        When you first sign up for Mturk, your account will be limited to submitting 100 HITs a day. This is called the "probation period" and lasts for around ten days. If you submit at least a few HITs on each of these days your account will be unlocked and you will be able to submit up to 3800 HITs daily. This is important and should be done as quickly as possible. While reaching 3800 HITs is a challenge -- it's not difficult to hit the cap of 100, especially when working on batches. This can severely limit your earning potential. You should also prioritize increasing your number of approved HITs as quickly as possible. Requesters often place qualifications on their work that exclude turkers with a low number of submitted HITs. To efficiently increase your approved HIT count you should focus on working on quick, lower paying batch HITs. </p><br />
+        <p class="title is-4">Scripts</p>
+        <p>
+        The primary <a href="https://worker.mturk.com/" target="_blank">Available HITs Page</a> can be pretty hard to navigate and doesn't provide many quality of life features. For this reason several industrious turkers have created scripts that you can install in your browser to help make things significantly more efficient. These scripts will help you both find and accept higher quality HITs. The sooner you learn how to utilize these scripts the better off you will be (and the more money you will make). I have written a <a href="scripts.html" target="_blank">guide to Mechanical Turk scripts</a> to help you get started. </p><br />
+        <p class="title is-4">Qualifications</p>
+        <p>
+        Qualifications are an essential part of making decent money on Mturk. Some of the best HITs on Mturk require a qualification to work on. So how does one get these qualifications? You may have noticed a "request qualification" link as you were scanning Mturk.<br /><img class="add-padding-top add-padding-bottom" src="images/request_qualification.png" alt="Qualification button on Mturk"><br /> This is <b>NOT</b> how you get most worthwhile qualifications. 99% of the time no one ever sees requests that were made in this way, although that button may still be worth clicking on as occasionally a qualification is granted automatically when you do so, and you have nothing to lose. Just don't expect anything. The real way to get worthwhile qualifications is to complete "qualification HITs," HITs a requester posts as a trial run to find workers who can produce quality results. If you want the qualification, you have to be there when these HITs are posted. Using a script to alert you when a qualification HIT is posted will help, along with using a script to track quality requesters. A solid qualification pool will take time to build, but will pay off big-time in the long run. If you ask an experienced turker for advice, the very first thing they tell you may very well be "always be qualing."<br /><br /> 
+        Some qualifications used by requesters are based on stats tied to your account rather than being assigned by the requester themselves, such as total HITs submitted or HIT approval rate. Others are assigned by Amazon for the use of all requesters, such as the <a href="https://worker.mturk.com/qualifications/00000000000000000060" target="_blank">adult content qualification</a> or the so called <a href="https://worker.mturk.com/requesters/AXKBO5V1Y75RL/projects?page_size=20&filters%5Bqualified%5D=false&filters%5Bmasters%5D=false&sort=num_hits_desc&filters%5Bmin_reward%5D=0.00" target="_blank">premium qualifications</a> (premium because Amazon, somewhat exorbitantly, charges requesters extra to use them).</p><br />
+        <p class="title is-4">Surveys</p>
+        <p>
+        If you have attempted to make money online in the past, you may be very familiar with online surveys, and perhaps a little wary of them. I have good news and bad news. The good news is, surveys found on Mechanical Turk can pay rather well, significantly better than what you may be used to. The bad news is, most of them don't. There are a lot of poorly paying, painfully monotonous surveys to be found on Mturk and it may take some practice to learn how to avoid them. Working on surveys can be a little bit of a lottery because even if a requester provides a time estimate of how long the survey will take, these estimates are regularly inaccurate (often to a turkers benefit). For example, a four dollar survey HIT can provide an estimate of forty five minutes, six dollars an hour; the survey would go on to only take fifteen minutes, sixteen dollars an hour. Using a script that displays review information (like Turkerview or Turkopticon) can help <b>A LOT</b> in determining which surveys are worth your time and which ones to avoid.</p><br />
+        <p class="title is-4">Batches</p>
+        <p>
+        When there is real money to be made on Mturk, it's usually from a good batch. Batches are great because unlike surveys it's relatively easy to determine exactly how well you are being paid, and you can drop out whenever you want at little cost. It's also much easier to get into the "flow" when working on a good batch than when working on surveys. Good batches are rare, and when they do pop up experienced turkers are sure to take advantage. For this reason these batches tend to disappear quickly (which is a big reason as to why qualifications that allow you to work on a good batch are so prized, there is less competition when the batch is behind a qual). When a good batch pops up you have to be ready to jump on it and get to work until it's dead.</p><br />
+        <p class="title is-4">Approval Rate and Rejections</p>
+        <p>
+        It's common for new turkers to be anxious about work getting rejected. Requesters do often use approval rating as a qualification and when you haven't completed many HITs a few rejections can really tank your rating. This is understandable, and some care SHOULD be taken when have a brand new account (you want to avoid falling under a 97% approval rate) -- but for the most part rejections are not really worth worrying about. If you submit good work, your HITs will be approved a vast majority of the time. There will be some unfortunate exceptions but they will be few and far between. Don't let rejection anxiety stand in your way of working on something that pays well. People will often advise new turkers "build numbers," which means working on a lot of short batch HITs that may not pay very well but will raise your total submitted HITs number quickly so if you do get rejected your approval rating won't get hit as hard. My personal opinion is that this is mostly a waste of time, but if you find yourself unable to shake the rejection anxiety, it may be worthwhile for you. If you ever receive a rejection you believe is unfair, it doesn't hurt to send a <i>polite</i> email to the offending requester asking for clarification or for a rejection reversal. Some requesters are better at responding than others, many simply ignore all emails so your mileage may vary.</p><br />
+        <p class="title is-4">Mturk Communities</p>
+        <p>
+        There are several forums where turkers gather to share good HITs, offer each other advice, or simply to socialize. Mturk has a relatively high learning curve and joining one of these communities can go a long way to helping you overcome it.</p><br /> <b>Options include</b>:
+        <div class="content">
+          <ul>
+            <li><a href ="https://www.mturkcrowd.com/" target="_blank">Mturk Crowd</a></li>
+            <li><a href="https://forum.turkerview.com/" target="_blank">Turkerview Forum</a></li>
+            <li><a href="https://www.reddit.com/r/mturk/" target="_blank">Reddit</a></li>
+          </ul>
+        </div>
+        <p>
+        Mturk Crowd and Turkerview Forum both have "daily threads" where HITs and discussion relevant to the current day are posted. Regularly scanning through these threads can help you stay up to date on what's going on and is a good place to find valuable insight from experienced turkers.</p><br />
+        <p class="title is-4">Closing Comments</p>
+        <p class="add-padding-bottom">
+        Starting out on Mturk can be overwhelming, but with a will to learn and some persistence it can become a solid way to make money. This will take time, and your hourly pay rate may start out fairly low, but as you gain experience and absorb information you will notice it steadily increase. Don't settle on bad work; unless you're desperate it's okay to be a little selective -- just be ready to grind when the quality work does show up. Best of luck, go out there and start making that money!
+        </p>
+      <a class="button is-dark is-medium is-pulled-right" href="scripts.html">Learn More: Scripts</a>
+    </div>
+</section>
+
+<!-- Footer -->
+
+  <footer class="footer">
+      <div class="content has-text-centered has-text-grey-lighter">
+        <p>
+          <strong id="footer-title">Mturk Guide</strong> by <a href="https://www.mturkcrowd.com/members/tsolo315.27/" target="_blank">TSolo315</a>. 2019 © All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+  </body>
+</html>

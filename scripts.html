@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138864817-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138864817-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A guide to increasing turking efficiency by installing helpful userscripts. Learn about how Mturk scripts are used to help workers make more money.">
+    <title>MTurk Script Guide</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body class="main">
+
+<!--Navigation Bar-->
+
+<nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+      <img src="images/mglogo.png" width="120" height="30">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBase">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBase" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">
+        Home
+      </a>
+
+      <a class="navbar-item" href="getting-started.html">
+        Getting Started
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link is-active" href="scripts.html">
+          Scripts
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item is-active">
+            Script Guide
+          </a>
+          <a class="navbar-item" href="primary-scripts.html">
+            Primary Scripts
+          </a>
+          <a class="navbar-item" href="accessory-scripts.html">
+            Accessory Scripts
+          </a>
+        </div>
+      </div>
+      <a class="navbar-item" href="leveling-up.html">
+        Leveling Up
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="autohotkey-tutorials-overview.html">
+          Tutorials
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="autohotkey-tutorials-overview.html">
+            AutoHotkey
+          </a>
+        </div>
+      </div>
+
+      <a class="navbar-item" href="approval-rating-calculator.html">
+        Approval Rating Calculator
+      </a>
+
+    </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a id="contact-me" class="button is-light" href="contact-me.html">
+              <span class="icon">
+                <i class="fa fa-envelope fa-lg"></i>
+              </span>
+              &nbsp;&nbsp;Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Burger JScript -->
+  <script type="text/javascript">
+    (function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#'+burger.dataset.target);
+
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
+
+<!-- Breadcrumb -->
+
+    <section class="section">
+        <div class="container">
+            <nav class="breadcrumb add-extra-padding-top" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="is-active"><a href="#" aria-current="page">Script Guide</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+<!-- Author -->
+
+    <section class="section no-padding-horizontal no-padding-vertical">
+        <div class="container">
+            <article class="media center-it">
+                <figure class="media-left">
+                    <figure class="image is-64x64 no-margin-horizontal">
+                        <img src="images/testa6464.png">
+                    </figure>
+                </figure>
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>TSolo315</strong>
+                            <a href="https://www.mturkcrowd.com/members/tsolo315.27/">MturkCrowd</a><br>
+                            <span class="has-text-grey">Six years of turking experience<br>
+                            <time datetime="2019-04-20">Published: 04/20/2019</time></span>
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+<!-- Content -->
+
+<section class="section has-background-grey-lighter add-flex no-padding-top">
+  <div class="container">
+    <h1 class="title">Mturk Scripts</h1>
+    <p class="subtitle">Getting the most out of Mechanical Turk</p>
+    <p>Several tools have been created to help workers be more productive on Mechanical Turk. Many of these tools come in the form of userscripts you can install in your web browser. In this guide I will walk you through getting started with installing Mturk scripts and will help you find the most helpful scripts for the aspiring turker. Before we start I will define some important terms.</p><br />
+    <div class="notification is-warning definitions no-padding-bottom">
+    <div class="columns">
+      <div class="column">
+        <dl class="is-family-sans-serif"> 
+          <dt>Mturk Script:</dt>
+          <dd>A script you install in your browser to increase turking efficiency. Scripts can provide new functionality or alter the default behavior of Mechanical Turk.</dd>
+          <dt>Request:</dt>
+          <dd>Any time a script asks the Mechanical Turk servers for information it is making a "request." This is similar to typing in a url in your browser or refreshing a webpage. With scripts this normally happens behind the scenes.</dd>
+          <dt>Scraper:</dt>
+          <dd>A script that frequently requests information from a website (in this case, Mturk.)</dd>
+        </dl>
+      </div>
+      <div class="column">
+        <dl class="is-family-sans-serif">
+          <dt>Panda:</dt>
+          <dd>Short for "preview and accept." In essence a Panda is a way of continually sending a request to Mturk in an attempt to catch a particular HIT.</dd> 
+          <dt>PRE:</dt>
+          <dd>Short for "page request error." This error will occur when you send too many requests in a short period of time and will prevent the request from going through. These errors often pop up when using Pandas and it can take some careful balancing to avoid them.</dd>
+        </dl>
+    </div></div></div><br />
+    <p>
+    The very first thing you need to do is grab the Chrome <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en" target="_blank">Tampermonkey</a> extension, or the Firefox <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/" target="_blank">Tampermonkey</a> extension. This extension will allow you to install and utilize a majority of Mturk userscripts (a few scripts are in the form of browser extensions in which case Tampermonkey is not a requirement.) After this is done you are ready to start installing. For the purpose of this guide I'm going to separate scripts into two categories, "primary scripts," which will be major scripts that offer a large variety of functionality, and "accesory scripts," which will be smaller or single-purpose scripts. A list of primary scripts can be found here: <a href="primary-scripts.html" target="_blank">Primary Scripts</a>. Browse through it and install the ones that look the most useful (I personally recommend grabbing Mturk Suite and Turkerview.) A list of accessory scripts can be found here: <a href="accessory-scripts.html" target="_blank">Accessory Scripts</a>.</p><br />
+    <p class="title is-4">HIT Reviews</p>
+    <p>
+    Because it can often be difficult to distinguish the good HITs from the bad, HIT review services are practically a neccessity for efficient turking. Before these services existed it was a challenge to tell the trustworthy, professional requesters from those trying to exploit a cheap workerbase. With a review script installed all you need to do is scroll over an icon on the HIT page review information will be <a class="thumb">conveniently displayed<span><img src="images/TVReviewExample.png"/></a>
+    </span>. While reviews are not infalliable, they do provide a great baseline for making a judgement call on whether a HIT is worth working on or not. Both Turkerview and Turkopticon allow turkers to leave reviews and provide tools to view the review information on the HITs page, but at the moment Turkerview is the more widely used (and actively developed) of the two. </p><br />
+    <p class="title is-4">Scrapers</p>
+    <p>
+    Tools like HIT Finder from Mturk Suite and Mturk Engine include a HIT table that will be populated with HITs from the main HIT page on Mturk, displayed in a manner that is easier to scan. These scrapers allow you to do things like block HITs or requesters from appearing in the HIT table or alert you of new HITs being posted; features that are sorely lacking on Mechanical Turk. A few tips regarding scrapers:</p>
+    <div class="content">
+    <ul>
+      <li>Set the refresh time relatively low to give you a better chance of catching new HITs, before other turkers take them all.</li>
+      <li>Use the include and block list features liberally.</li>
+      <li>Only use review information as a general guideline and don't be afraid to do HITs from requesters without reviews.</li>
+      <li>Don't set a high minimum pay setting. Some of the best HITs on Mturk are low paying HITs that don't take very long to do and allow you to do several of them (batches.)</li>
+    </ul>
+    </div>
+    <p class="title is-4">Pandas</p>
+    <p>
+    Learning your way around Pandas is easily the fastest way to start making more money on Mturk. Missed a HIT that looked good? Put it on panda. Trying to catch a HIT from a popular batch? Put it on Panda. Does a requester post a HIT regularly throughout the day? Put it on Panda. Several Mturk scripts offer the ability to save, organize, and run Pandas. Examples include <a href="https://chrome.google.com/webstore/detail/mturk-suite/iglbakfobmoijpbigmlfklckogbefnlf?hl=en-US" target="_blank">Mturk Suite</a> and <a href="https://greasyfork.org/en/scripts/19168-jr-mturk-panda-crazy" target="_blank">Panda Crazy</a>.</p>
+    <div class="content">
+      <ul>
+        <li>The lower the refresh timer the higher the chance of catching the HIT. Too many Pandas with low timers will lead to PREs though, so balance accordingly.</li>
+        <li>Sometimes Mturk will throttle a batch, only allowing you to have a few HITs from the batch in your queue at once. No amount of Pandaing will get around this.</li>
+        <li>If you think it might be too late to start a Panda, check the HIT's expiration timer. If you have a Panda active when it expires from someone else's queue you have a good chance of catching it. If it's already been twice the expiration timer since the HIT posted, it's less likely you will catch it.</li>
+        <li>Prioritize the best HITs, don't try to panda everything.</li>
+        <li>If you have a panda running you will actually catch a HIT before it even shows up on the main HITs page.</li>
+      </ul>
+    </div>
+    <p class="title is-4">Accessory Scripts</p>
+    <p class="add-padding-bottom">
+    There are a variety of useful scripts that are smaller in scope, serving a single purpose or helping with single type of HIT. If you run into a problem that you think could be solved by a script, it doesn't hurt to run a search on Google or <a href="https://greasyfork.org/en/scripts/by-site/mturk.com" target="_blank">Greasyfork</a> to see if someone has uploaded a script that could solve said problem. If you really want to set yourself apart from the competition, learning how to write your own scripts is a good way to do so. While Mturk userscripts are primarily written in Javascript, you could also write useful macros with tools such as <a href="https://www.autohotkey.com/" target="_blank">AutoHotkey</a> or <a href="https://imacros.net/download/free-versions/" target="_blank">iMacros</a> (both of which are significantly easier to learn). A collection of tutorials on how to write AutoHotkey scripts to help make HITs more efficient can be found here: <a href="autohotkey-tutorials-overview.html">Tutorials for Turkers: AutoHotkey</a>.
+    </p>
+    <p class="title is-4">Outdated Scripts</p>
+    <p class="add-padding-bottom">
+    There are several scripts that at one time were heavily used but have now fallen into disuse or are entirely non-functional. This is often due to the script author no longer providing updates for these scripts. This can be confusing for new turkers because when searching for information about Mturk Scripts, these scripts will still pop up -- often with glowing recommendations. Here is a short list of Mturk scripts you should avoid as better (or actually functional) alternatives are available: HIT Scraper, HIT Database, TurkMaster, HIT Monitor, Turk Alert/Page Monitor.
+    </p>
+    <a class="button is-dark is-medium is-pulled-right" href="leveling-up.html">Learn More: Leveling Up</a>
+  </div>
+</section>
+
+<!-- Footer -->
+
+  <footer class="footer">
+      <div class="content has-text-centered has-text-grey-lighter">
+        <p>
+          <strong id="footer-title">Mturk Guide</strong> by <a href="https://www.mturkcrowd.com/members/tsolo315.27/" target="_blank">TSolo315</a>. 2019 © All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact me.">
+    <title>Contact Mturk Guide.</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script defer src="js/contact_form.js"></script>
+  </head>
+  <body class="main">
+
+<!--Navigation Bar-->
+
+<nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+      <img src="images/mglogo.png" width="120" height="30">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBase">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBase" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">
+        Home
+      </a>
+
+      <a class="navbar-item" href="getting-started.html">
+        Getting Started
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="scripts.html">
+          Scripts
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="scripts.html">
+            Script Guide
+          </a>
+          <a class="navbar-item" href="primary-scripts.html">
+            Primary Scripts
+          </a>
+          <a class="navbar-item" href="accessory-scripts.html">
+            Accessory Scripts
+          </a>
+        </div>
+      </div>
+      <a class="navbar-item" href="leveling-up.html">
+        Leveling Up
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="autohotkey-tutorials-overview.html">
+          Tutorials
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="autohotkey-tutorials-overview.html">
+            AutoHotkey
+          </a>
+        </div>
+      </div>
+
+      <a class="navbar-item" href="approval-rating-calculator.html">
+        Approval Rating Calculator
+      </a>
+
+    </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a id="contact-me" class="button is-light" href="contact-me.html">
+              <span class="icon">
+                <i class="fa fa-envelope fa-lg"></i>
+              </span>
+              &nbsp;&nbsp;Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Burger JScript -->
+  <script type="text/javascript">
+    (function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#'+burger.dataset.target);
+
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
+<section class="section has-background-grey-lighter add-flex six-pad-top">
+    <div class="container" style="max-width: 420px;">
+        <div id="after_submit"></div>
+        <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+            <div class="field">
+                <div class="control">
+                    <label class="required" for="name">Your name:</label><br />
+                    <input id="name" class="input is-medium" name="name" type="text" placeholder="Name" /><br />
+                    <span id="name_validation" class="error_message"></span>
+            </div></div>
+            <div class="field">
+                <div class="control">
+                    <label class="required" for="email">Your email:</label><br />
+                    <input id="email" class="input is-medium" name="email" type="text" placeholder="me@example.com" /><br />
+                    <span id="email_validation" class="error_message"></span>
+            </div></div>
+            <div class="field">
+                <div class="control">
+                    <label class="required" for="message">Your message:</label><br />
+                    <textarea id="message" class="textarea" name="message" placeholder="Message"></textarea><br />
+                    <span id="message_validation" class="error_message"></span>
+            </div></div>
+            <input id="submit_button" type="submit" value="Send email" />
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+
+    <footer class="footer">
+        <div class="content has-text-centered has-text-grey-lighter">
+          <p>
+            <strong id="footer-title">Mturk Guide</strong> by <a href="https://www.mturkcrowd.com/members/tsolo315.27/" target="_blank">TSolo315</a>. 2019 © All Rights Reserved.
+          </p>
+        </div>
+      </footer>
+</body>
+</HTML>

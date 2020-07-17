@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138864817-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138864817-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A collection of tutorials to help you get started writing AHK scripts to improve turking efficiency.">
+    <title>Tutorials for Turkers: AutoHotkey</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body class="main">
+
+<!--Navigation Bar-->
+
+<nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+      <img src="images/mglogo.png" width="120" height="30">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBase">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBase" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">
+        Home
+      </a>
+
+      <a class="navbar-item" href="getting-started.html">
+        Getting Started
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="scripts.html">
+          Scripts
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="scripts.html">
+            Script Guide
+          </a>
+          <a class="navbar-item" href="primary-scripts.html">
+            Primary Scripts
+          </a>
+          <a class="navbar-item" href="accessory-scripts.html">
+            Accessory Scripts
+          </a>
+        </div>
+      </div>
+      <a class="navbar-item" href="leveling-up.html">
+        Leveling Up
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link is-active" href="autohotkey-tutorials-overview.html">
+          Tutorials
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item is-active" href="autohotkey-tutorials-overview.html">
+            AutoHotkey
+          </a>
+        </div>
+      </div>
+
+      <a class="navbar-item" href="approval-rating-calculator.html">
+        Approval Rating Calculator
+      </a>
+
+    </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a id="contact-me" class="button is-light" href="contact-me.html">
+              <span class="icon">
+                <i class="fa fa-envelope fa-lg"></i>
+              </span>
+              &nbsp;&nbsp;Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Burger JScript -->
+  <script type="text/javascript">
+    (function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#'+burger.dataset.target);
+
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
+
+<!-- Breadcrumb -->
+
+<section class="section">
+  <div class="container">
+      <nav class="breadcrumb add-extra-padding-top" aria-label="breadcrumbs">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li class="is-active"><a href="#" aria-current="page">Tutorials for Turkers: AutoHotkey</a></li>
+          </ul>
+      </nav>
+  </div>
+</section>
+
+<!-- Content -->
+
+<section class="section has-background-grey-lighter add-flex no-padding-top">
+    <div class="container">
+        <h1 class="title">Tutorials for Turkers: AutoHotkey</h1>
+        <p class="subtitle">Learning how to write AHK scripts</p>
+        <table class="table is-hoverable is-striped">
+          <thead>
+            <tr>
+              <th><abbr title="Number">Num</abbr></th>
+              <th>Title</th>
+              <th>Difficulty</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td><a href="download-and-install-autohotkey-tutorial.html" title="Downloading and Installing AutoHotkey">Downloading and Installing AutoHotkey</a></td>
+              <td><p><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><br /></p></td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td><a href="writing-your-first-autohotkey-script-tutorial.html" title="Writing your First AutoHotkey Script">Writing your First AutoHotkey Script</a></td>
+              <td><p><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><br /></p></td>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td><a href="autohotkey-basics-tutorial.html" title="AutoHotkey Basics">AutoHotkey Basics</a></td>
+              <td><p><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><br /></p></td>
+            </tr>
+            <tr>
+              <th>4</th>
+              <td><a href="autohotkey-hotstring-tutorial.html" title="Hotstrings">Hotstrings</a></td>
+              <td><p><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><br /></p></td>
+            </tr>
+            <tr>
+              <th>5</th>
+              <td><a href="autohotkey-click-and-scroll-tutorial.html" title="Click and Scroll">Click and Scroll</a></td>
+              <td><p><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><br /></p></td>
+            </tr>
+            <tr>
+              <th>6</th>
+              <td><a href="autohotkey-variable-basics.html" title="Variable Basics">Variable Basics</a></td>
+              <td><p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><br /></p></td>
+            </tr>
+            <tr>
+              <th>7</th>
+              <td><a href="autohotkey-clipboard-and-strreplace-tutorial.html" title="Clipboard and StrReplace">Clipboard and StrReplace</a></td>
+              <td><p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><br /></p></td>
+            </tr>
+            <tr>
+              <th>8</th>
+              <td><a href="autohotkey-expressions-tutorial.html" title="Expressions">Expressions</a></td>
+              <td><p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><br /></p></td>
+            </tr>
+            <tr>
+              <th>9</th>
+              <td><a href="autohotkey-if-statements-tutorial.html" title="If Statements">If Statements</a></td>
+              <td><p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><br /></p></td>
+            </tr>
+            <tr>
+                <th>10</th>
+                <td><a href="autohotkey-loops-tutorial.html" title="Loops">Loops</a></td>
+                <td><p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><br /></p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+</section>
+
+
+
+
+<!-- Footer -->
+
+  <footer class="footer">
+      <div class="content has-text-centered has-text-grey-lighter">
+        <p>
+          <strong id="footer-title">Mturk Guide</strong> by <a href="https://www.mturkcrowd.com/members/tsolo315.27/" target="_blank">TSolo315</a>. 2019 © All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+  </body>
+</html>

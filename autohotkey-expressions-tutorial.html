@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138864817-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138864817-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn how perform operations on variables in AutoHotkey by using expressions.">
+    <title>Expressions</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/prism.js"></script>
+  </head>
+  <body class="main">
+
+<!--Navigation Bar-->
+
+<nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+      <img src="images/mglogo.png" width="120" height="30">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBase">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBase" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">
+        Home
+      </a>
+
+      <a class="navbar-item" href="getting-started.html">
+        Getting Started
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="scripts.html">
+          Scripts
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="scripts.html">
+            Script Guide
+          </a>
+          <a class="navbar-item" href="primary-scripts.html">
+            Primary Scripts
+          </a>
+          <a class="navbar-item" href="accessory-scripts.html">
+            Accessory Scripts
+          </a>
+        </div>
+      </div>
+      <a class="navbar-item" href="leveling-up.html">
+        Leveling Up
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link is-active" href="autohotkey-tutorials-overview.html">
+          Tutorials
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="autohotkey-tutorials-overview.html">
+            AutoHotkey
+          </a>
+        </div>
+      </div>
+
+      <a class="navbar-item" href="approval-rating-calculator.html">
+        Approval Rating Calculator
+      </a>
+
+    </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a id="contact-me" class="button is-light" href="contact-me.html">
+              <span class="icon">
+                <i class="fa fa-envelope fa-lg"></i>
+              </span>
+              &nbsp;&nbsp;Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Burger JScript -->
+  <script type="text/javascript">
+    (function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#'+burger.dataset.target);
+
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
+
+<!-- Breadcrumb -->
+
+<section class="section">
+  <div class="container">
+      <nav class="breadcrumb add-extra-padding-top" aria-label="breadcrumbs">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="autohotkey-tutorials-overview.html">Tutorials for Turkers: AutoHotkey</a></li>
+              <li class="is-active"><a href="#" aria-current="page">Expressions</a></li>
+          </ul>
+      </nav>
+  </div>
+</section>
+
+<!-- Author -->
+
+<section class="section no-padding-horizontal no-padding-vertical">
+    <div class="container">
+        <article class="media center-it">
+            <figure class="media-left">
+                <figure class="image is-64x64 no-margin-horizontal">
+                    <img src="images/testa6464.png">
+                </figure>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>TSolo315</strong>
+                        <a href="https://www.mturkcrowd.com/members/tsolo315.27/">MturkCrowd</a><br>
+                        <span class="has-text-grey">Six years of turking experience<br>
+                        <time datetime="2019-07-03">Published: 07/03/2019</time></span>
+                    </p>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- Content -->
+
+<section class="section has-background-grey-lighter add-flex no-padding-top">
+    <div class="container">
+        <h1 class="title">Expressions</h1>
+        <p class="subtitle">Doing math on variables</p>
+        <div class="content">
+        <div class="numberCircle">1</div> <p class="tutorialText">What is an Expression?</p><br />
+        <p class="tutorialFollow">An expression is used to perform operations on variables. You can perform operations with numbers, such as simple addition, subtraction, multiplication, etc. You can also use expressions with strings to alter text content. We have already seen several examples of expressions involving strings:</p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+clipboard := "my text"   ; Give the clipboard entirely new contents.
+MyNewVar := MyVar1 MyVar2 ; Combine two variables containing text into one new variable.
+clipboard := "" ; Clear the clipboard.
+</code>
+</pre>
+</div>
+        <p class="tutorialFollow">The <b>:=</b> symbol grouping, that you have seen numerous times at this point, is an indicator that an expression is taking place and that the result is being stored in a variable. In an expression like this variables are not enclosed in percentage signs and plain text must always be surrounded by quotation marks. Outside of expressions you need to surround variable names in percentage signs BECAUSE text does not need to be enclosed in quotes. This allows AHK to differentiate between sending the literal variable name text or the contents of the variable.</p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+^1::
+MyVar1 := "This is my new variable." ; Set MyVar1 to hold the text: This is my new variable
+sendinput %MyVar1% ; send the text: This is my new variable.
+sendinput {enter}
+MyVar1 := MyVar1 " There are no percentage signs here" ; Append the text: There are no percentage signs here to the end of the variables text content.
+sendinput %MyVar1% ; Send the text: This is my new variable. There are no percentage signs here
+sendinput {enter}
+sendinput If it is not an expression you do not need to surround text in quotes ; Send this exact text
+sendinput {enter}
+sendinput %MyVar1% and you can mix variables and text when using sendinput. ; Send the text: This is my new variable. There are no percentage signs here and you can mix variables and text when using sendinput.
+return
+</code>
+</pre>
+</div>
+        <div class="numberCircle">2</div> <p class="tutorialText">Expressions and Numbers</p><br />
+        <p class="tutorialFollow">Expressions can be used to perform operations on numbers. This is done by using what is known as an <i>operator</i>. Here are some examples of common operators used with numbers:</p>
+        <div class="content">
+          <ul>
+            <li class="tutorialFollow">The + operator is used for addition.</li>
+            <li class="tutorialFollow">The - operator is used for subtraction.</li>
+            <li class="tutorialFollow">The * operator is used for multiplication.</li>
+            <li class="tutorialFollow">The / operator is used for division.</li>
+            <li class="tutorialFollow">The ** operator is used to power.</li>
+          </ul>
+        </div>
+        <p class="tutorialFollow">Here is an example of expressions involving numbers:</p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+^1::
+click 2
+clipboard = ""
+sendinput ^c
+clipwait, 5
+originalnumber := clipboard
+numberaddfive := originalnumber + 5
+numbersubfive := originalnumber - 5
+numberdivfive := originalnumber / 5
+numbermultfive := originalnumber * 5
+return
+
+^2::
+sendinput The number plus five is: %numberaddfive%
+sendinput {enter}
+sendinput The number minus five is: %numbersubfive%
+sendinput {enter}
+sendinput The number divided by five is: %numberdivfive%
+sendinput {enter}
+sendinput The number multiplied by five is: %numbermultfive%
+sendinput {enter}
+sendinput The original number was: %originalnumber%
+originalnumber := ""
+numberaddfive := ""
+numbersubfive := ""
+numberdivfive := ""
+numbermultfive := ""
+return
+</code>
+</pre>
+</div>
+        <p class="tutorialFollow">With the first hotkey a number under the cursor is copied and saved to a new variable. Four expressions are then done on that variable with the results each being saved to a new variable. With the second hotkey the results are sent and the variables are cleared.</p>
+        <div class="numberCircle">3</div> <p class="tutorialText">Expressions and Strings</p><br />
+        <p class="tutorialFollow">The only common operator used on strings is the <b>.</b> operator, and for the most part, it is optional. The <b>.</b> operator is used to combine strings together, and must have a single space on each side.</p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+^1::
+MyVar1 := "This is a variable with text. "
+MyVar2 := "This is another text variable."
+MyVar3 := MyVar1 . MyVar2 ; This is a variable with text. This is another text variable.
+MyVar4 := "This is plain text and " . MyVar1 ; This is plain text and This is a variable with text.
+return
+</code>
+</pre>
+</div>
+        <div class="numberCircle">4</div> <p class="tutorialText">True and False</p><br />
+        <p class="tutorialFollow">In AHK there are two boolean values, <i>true</i> and <i>false</i>. These are important when using if statements, which we will cover in a later tutorial. You can use an expression to evaluate if something is true or false. For example, if you had a counter variable set up that would increment by one every time you pressed a hotkey, you could use an expression like: <b>countermax := counter > 10</b> to check if your counter was greater than 10. If your counter variable was indeed greater than 10 the countermax variable would be set to <i>true</i>. Otherwise it would be set to <i>false</i>. There are several comparison operators: </p>
+        <div class="content">
+          <ul>
+            <li class="tutorialFollow">The > operator is used for greater than.</li>
+            <li class="tutorialFollow">The >= operator is used for greater than or equal to.</li>
+            <li class="tutorialFollow">The < operator is used for less than.</li>
+            <li class="tutorialFollow">The <= operator is used for less than or equal to.</li>
+            <li class="tutorialFollow">The = operator is used for equal to.</li>
+            <li class="tutorialFollow">The != operator is used for not equal to.</li>
+          </ul>
+        </div>
+        <div class="numberCircle">5</div> <p class="tutorialText">Practical Example</p><br />
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+f1::
+click 2 ; Double click.
+clipboard := "" ; Empty the clipboard.
+sendinput ^c ; Copy highlighted number.
+clipwait, 5 ; Wait for text to be copied.
+result := clipboard ; Set result variable to clipboard contents.
+result := "The number of followers is: " (result - 100) ; Set result variable to "The number of followers is: " plus the result number minus one hundred.
+sendinput ^w ; Close tab.
+sleep 500 ; Short sleep.
+sendinput {tab} ; Tab press.
+sendinput %result% ; Send result variable.
+result := "" ; Clear the result variable.
+return
+</code>
+</pre>
+</div>
+        <p class="tutorialFollow add-padding-bottom">Imagine a HIT that asked you to go to a webpage and then return the number of followers on that webpage minus one hundred. This script would allow you to simply hover your cursor over the number of followers, press the hotkey, and allow the script to handle the rest.</p>
+        <a class="button is-dark is-medium is-pulled-right" href="autohotkey-if-statements-tutorial.html">Next Tutorial: If Statements</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+
+  <footer class="footer">
+      <div class="content has-text-centered has-text-grey-lighter">
+        <p>
+          <strong id="footer-title">Mturk Guide</strong> by <a href="https://www.mturkcrowd.com/members/tsolo315.27/" target="_blank">TSolo315</a>. 2019 © All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+  </body>
+</html>

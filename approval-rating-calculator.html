@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138864817-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138864817-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A calculator that will allow you to calculate how many more approved HITs you will need to reach your desired HIT approval rating.">
+    <title>Mturk Approval Rating Calculator</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/jquery-3.4.0.min.js"></script>
+  </head>
+  <body class="main">
+
+<!--Navigation Bar-->
+
+<nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+      <img src="images/mglogo.png" width="120" height="30">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBase">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBase" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">
+        Home
+      </a>
+
+      <a class="navbar-item" href="getting-started.html">
+        Getting Started
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="scripts.html">
+          Scripts
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="scripts.html">
+            Script Guide
+          </a>
+          <a class="navbar-item" href="primary-scripts.html">
+            Primary Scripts
+          </a>
+          <a class="navbar-item" href="accessory-scripts.html">
+            Accessory Scripts
+          </a>
+        </div>
+      </div>
+      <a class="navbar-item" href="leveling-up.html">
+        Leveling Up
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="autohotkey-tutorials-overview.html">
+          Tutorials
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="autohotkey-tutorials-overview.html">
+            AutoHotkey
+          </a>
+        </div>
+      </div>
+
+        <a class="navbar-item is-active" href="approval-rating-calculator.html">
+          Approval Rating Calculator
+        </a>
+
+    </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a id="contact-me" class="button is-light" href="contact-me.html">
+              <span class="icon">
+                <i class="fa fa-envelope fa-lg"></i>
+              </span>
+              &nbsp;&nbsp;Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Burger JScript -->
+  <script type="text/javascript">
+    (function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#'+burger.dataset.target);
+
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
+
+<!-- Breadcrumb -->
+
+<section class="section">
+  <div class="container">
+      <nav class="breadcrumb add-extra-padding-top" aria-label="breadcrumbs">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li class="is-active"><a href="#" aria-current="page">Mturk Approval Rating Calculator</a></li>
+          </ul>
+      </nav>
+  </div>
+</section>
+
+<!-- Content -->
+
+<section class="section has-background-grey-lighter add-flex no-padding-top">
+    <div id="calcCenter" class="container">
+        <h1 class="title">Mturk Approval Rating Calculator</h1>
+        <p class="subtitle">How many more approved HITs do I need to reach my desired approval rating?</p>
+        <div class="field">
+        <label class="label">Current Approved HITs:</label>
+        <div class="control">
+            <input class="input" id="approvedHITs" type="text" placeholder="Approved HITs">
+        </div>
+        <p class="help is-danger hidden" id="helpText1">This email is invalid</p>
+        </div>
+        <div class="field">
+        <label class="label">Current Rejected HITs:</label>
+        <div class="control">
+            <input class="input" id="rejectedHITs" type="text" placeholder="Rejected HITs">
+        </div>
+        <p class="help is-danger hidden" id="helpText2">This email is invalid</p>
+        </div>
+        <div class="field">
+        <label class="label">Desired Rating:</label>
+        <div class="control">
+            <input class="input" id="desiredRating" type="text" placeholder="99.9">
+        </div>
+        <p class="help is-danger hidden" id="helpText3">This email is invalid</p>
+        </div>
+        <div class="field">
+            <div class="control">
+                <button id="approvalRateCalcSubmit" class="button is-link">Calculate</button>
+            </div>
+        <p id="resultText" class="add-padding-top subtitle"></p>
+    </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+
+  <footer class="footer">
+      <div class="content has-text-centered has-text-grey-lighter">
+        <p>
+          <strong id="footer-title">Mturk Guide</strong> by <a href="https://www.mturkcrowd.com/members/tsolo315.27/" target="_blank">TSolo315</a>. 2019 © All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/approval-rating-calculator.js"></script>
+  </body>
+</html>

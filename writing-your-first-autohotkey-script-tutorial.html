@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138864817-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138864817-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Write your very first AutoHotkey script. Learn how to save and run an AHK script.">
+    <title>Writing your First AutoHotkey Script Tutorial</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/prism.js"></script>
+  </head>
+  <body class="main">
+
+<!--Navigation Bar-->
+
+<nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+      <img src="images/mglogo.png" width="120" height="30">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBase">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBase" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">
+        Home
+      </a>
+
+      <a class="navbar-item" href="getting-started.html">
+        Getting Started
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="scripts.html">
+          Scripts
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="scripts.html">
+            Script Guide
+          </a>
+          <a class="navbar-item" href="primary-scripts.html">
+            Primary Scripts
+          </a>
+          <a class="navbar-item" href="accessory-scripts.html">
+            Accessory Scripts
+          </a>
+        </div>
+      </div>
+      <a class="navbar-item" href="leveling-up.html">
+        Leveling Up
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link is-active" href="autohotkey-tutorials-overview.html">
+          Tutorials
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="autohotkey-tutorials-overview.html">
+            AutoHotkey
+          </a>
+        </div>
+      </div>
+
+      <a class="navbar-item" href="approval-rating-calculator.html">
+        Approval Rating Calculator
+      </a>
+
+    </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a id="contact-me" class="button is-light" href="contact-me.html">
+              <span class="icon">
+                <i class="fa fa-envelope fa-lg"></i>
+              </span>
+              &nbsp;&nbsp;Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Burger JScript -->
+  <script type="text/javascript">
+    (function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#'+burger.dataset.target);
+
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
+
+<!-- Breadcrumb -->
+
+<section class="section">
+  <div class="container">
+      <nav class="breadcrumb add-extra-padding-top" aria-label="breadcrumbs">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="autohotkey-tutorials-overview.html">Tutorials for Turkers: AutoHotkey</a></li>
+              <li class="is-active"><a href="#" aria-current="page">Writing Your First AutoHotkey Script</a></li>
+          </ul>
+      </nav>
+  </div>
+</section>
+
+<!-- Author -->
+
+<section class="section no-padding-horizontal no-padding-vertical">
+    <div class="container">
+        <article class="media center-it">
+            <figure class="media-left">
+                <figure class="image is-64x64 no-margin-horizontal">
+                    <img src="images/testa6464.png">
+                </figure>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>TSolo315</strong>
+                        <a href="https://www.mturkcrowd.com/members/tsolo315.27/">MturkCrowd</a><br>
+                        <span class="has-text-grey">Six years of turking experience<br>
+                        <time datetime="2019-05-15">Published: 05/15/2019</time></span>
+                    </p>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- Content -->
+
+<section class="section has-background-grey-lighter add-flex no-padding-top">
+    <div class="container">
+        <h1 class="title">Writing Your First AutoHotkey Script</h1>
+        <p class="subtitle">Learn how to write a simple AHK script</p>
+        <div class="content">
+        <div class="numberCircle">1</div> <p class="tutorialText">Create the AHK script file.</p><br />
+        <p class="tutorialFollow">There are two simple ways to do this:</p>
+        <div class="content">
+          <ul>
+            <li class="tutorialFollow">Right click your desktop or in a folder and choose New > AutoHotkey Script. You would then give the script a suitable name.</li>
+            <li class="tutorialFollow">Open a new notepad file and save the file with the .ahk file extension. So you would open notepad, choose File > Save As, and then save the file as "yourtitlehere.ahk".</li>
+          </ul>
+        </div>
+        <div class="numberCircle">2</div> <p class="tutorialText">Open the script file for editing.</p><br />
+        <p class="tutorialFollow">If your script it not yet open, right click the script file and click Edit Script.</p>
+        <div class="numberCircle">3</div> <p class="tutorialText">With the script file open, start coding.</p><br />
+        <p class="tutorialFollow">We will start with a very simple script. Copy the following into the script file:</p>
+        <div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+^t::
+SendInput This is my very first script
+return
+</code>
+</pre>
+        </div>
+        <p class="tutorialFollow">Script Breakdown: <b>^t::</b> is denoting the key you want to bind your macro to. In this case it is the key combination control + t. In AHK ^ stands for the control key. <b>Sendinput</b> is a command that tells AHK to send the following sequence of keys. In this case it will send "This is my very first script" Finally, the <b>return</b> command tells AHK that it has reached the end of the code for the current macro (AHK scripts can contain several hotkeys/macros in a single file and if you forget the return command AHK will immediately start running the next macro in the script without stopping -- which can wreak some havoc).</p>
+        <div class="numberCircle">4</div> <p class="tutorialText">Double click your script file (outside of the editor) to start the script.</p><br />
+        <p class="tutorialFollow">You may notice an AHK icon pop up in your system tray at the bottom right of your computer. When you edit a script you can right click this icon and choose "reload script" to activate any changes you have made since first running the script. If you don't reload the saved changes will have no effect.</p>
+        <div class="numberCircle">5</div> <p class="tutorialText">Place your cursor somewhere text can be written and press the hotkey combination Control+T.</p><br />
+        <p class="tutorialFollow add-padding-bottom">You should notice "This is my very first script" being written every time you use this hotkey. Congratulations, you have written your first AHK script!</p>
+        <a class="button is-dark is-medium is-pulled-right" href="autohotkey-basics-tutorial.html">Next Tutorial: AutoHotkey Basics</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+
+  <footer class="footer">
+      <div class="content has-text-centered has-text-grey-lighter">
+        <p>
+          <strong id="footer-title">Mturk Guide</strong> by <a href="https://www.mturkcrowd.com/members/tsolo315.27/" target="_blank">TSolo315</a>. 2019 © All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+  </body>
+</html>

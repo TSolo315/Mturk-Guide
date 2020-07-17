@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138864817-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138864817-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A collection of small but helpful MTurk scripts.">
+    <title>Accessory Scripts</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body class="main">
+
+<!--Navigation Bar-->
+
+<nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+      <img src="images/mglogo.png" width="120" height="30">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBase">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBase" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">
+        Home
+      </a>
+
+      <a class="navbar-item" href="getting-started.html">
+        Getting Started
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link is-active" href="scripts.html">
+          Scripts
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="scripts.html">
+            Script Guide
+          </a>
+          <a class="navbar-item" href="primary-scripts.html">
+            Primary Scripts
+          </a>
+          <a class="navbar-item is-active">
+            Accessory Scripts
+          </a>
+        </div>
+      </div>
+      <a class="navbar-item" href="leveling-up.html">
+        Leveling Up
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="autohotkey-tutorials-overview.html">
+          Tutorials
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="autohotkey-tutorials-overview.html">
+            AutoHotkey
+          </a>
+        </div>
+      </div>
+
+      <a class="navbar-item" href="approval-rating-calculator.html">
+        Approval Rating Calculator
+      </a>
+
+    </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a id="contact-me" class="button is-light" href="contact-me.html">
+              <span class="icon">
+                <i class="fa fa-envelope fa-lg"></i>
+              </span>
+              &nbsp;&nbsp;Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Burger JScript -->
+  <script type="text/javascript">
+    (function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#'+burger.dataset.target);
+
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
+
+<!-- Breadcrumb -->
+
+    <section class="section">
+        <div class="container">
+            <nav class="breadcrumb add-extra-padding-top" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="scripts.html">Scripts</a></li>
+                    <li class="is-active"><a href="#" aria-current="page">Accessory Scripts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+<!-- Author -->
+
+    <section class="section no-padding-horizontal no-padding-vertical">
+        <div class="container">
+            <article class="media center-it">
+                <figure class="media-left">
+                    <figure class="image is-64x64 no-margin-horizontal">
+                        <img src="images/testa6464.png">
+                    </figure>
+                </figure>
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>TSolo315</strong>
+                            <a href="https://www.mturkcrowd.com/members/tsolo315.27/">MturkCrowd</a><br>
+                            <span class="has-text-grey">Six years of turking experience<br>
+                            <time datetime="2019-04-20">Published: 04/20/2019</time></span>
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+<!-- Content -->
+
+<section class="section has-background-grey-lighter add-flex no-padding-top">
+  <div class="container">
+    <h1 class="title">Accessory Scripts</h1>
+    <p class="subtitle">Helpful tools</p>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/hitforker800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://greasyfork.org/en/scripts/36368-hit-forker" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">HIT Forker</h1></a>
+        HIT Forker is a offshoot of HIT Finder (from MTurk Suite) built to interact with Panda Crazy. When using this you can send HITs from the HIT Forker HIT table directly to Panda Crazy.
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/pandacrazyhelper800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://greasyfork.org/en/scripts/20380-jr-mturk-panda-crazy-helper" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">Panda Crazy Helper</h1></a>
+        A Panda Crazy companion script that adds buttons on several Mturk related sites and scripts that will interact directly with Panda Crazy.
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/mturkhourly800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://greasyfork.org/en/scripts/31108-mturk-hourly" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">Mturk Hourly</h1></a>
+        Saves information about how long a HIT took you to complete and the hourly pay rate of said HIT. This information can be viewed on your dashboard.
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/linkifyplusplus800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://greasyfork.org/en/scripts/4255-linkify-plus-plus" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">Linkify</h1></a>
+        Converts plain text links into hyperlinks. Useful for some batches.
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/niftysplit800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://chrome.google.com/webstore/detail/niftysplit/bkmjnlfillpnkgmjnhgklpjjlpjnfeil?hl=en" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">Nifty Split</h1></a>
+        A chrome extension that will split the window in two and open all links in the second window, maintaining the first. Useful when working on certain batches.
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/groupidhistory800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://greasyfork.org/en/scripts/38854-worker-mturk-group-id-history" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">Group ID History</h1></a>
+        Keeps a log of the group IDs of all HITs you have viewed. 
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/sloworjustme800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://gist.github.com/salembeats/fd67a279b7ec7977f2f01a90cbd0958b" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">Mturk Slow or Just Me?</h1></a>
+        A daily leaderboard for MTurk earnings where you can compare how well you are doing to others.
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/qualsorter800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://greasyfork.org/en/scripts/38977-worker-mturk-qual-sorter" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">Qual Sorter</h1></a>
+        Creates a sortable and searchable database of all the qualifications you own. Rather useful for checking if you have a certain qualification, as there is no search function available on Mechanical Turk.
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/nohitreloader800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://greasyfork.org/en/scripts/18547-mturk-worker-no-hit-reloader" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">No HIT Reloader</h1></a>
+        Reloads a HIT if it hasn't loaded and No HIT reloader has been turned on for it. Useful for a batches that are being throttled.
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/embiggenradio800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://greasyfork.org/en/scripts/8715-mmmturkeybacon-embiggen-radio-buttons-and-checkboxes" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">Embiggen Radio Buttons and Checkboxes</h1></a>
+        Makes radio buttons and checkboxes bigger and easier to click. 
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/uncheckradio800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://greasyfork.org/en/scripts/8716-mmmturkeybacon-unclick-radio-button" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">Uncheck Radio Button</h1></a>
+        Allows you to unclick buttons that would normally not allow you to do so. 
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/submithotkey800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://greasyfork.org/en/scripts/386710-mturk-submit-orange-buttons-with-hotkey" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">MTurk Submit HIT Hotkey</h1></a>
+        Sets the ~ key as a hotkey to submit HITs.  
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/dashboardenhancer800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://greasyfork.org/en/scripts/18991-mturk-worker-dashboard-enhancer" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">Dashboard Enhancer</h1></a>
+        Adds a "Today's Activity" section to your dashboard that displays information about your earnings and pay rate on a particular day.
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/darktheme800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://userstyles.org/styles/149148/mturk-worker-site-dark-theme-beta" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">Dark Theme</h1></a>
+        Changes the default white Mturk color scheme to a darker one. Scroll to the bottom and click the "Install style as userscript" link.
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/darkbluetheme800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://userstyles.org/styles/149700/mturk-worker-site-dark-blue-theme-beta" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">Dark Blue Theme</h1></a>
+        Changes the default white Mturk color scheme to a darker blue one. Scroll to the bottom and click the "Install style as userscript" link.
+    </div></div>
+  </div>
+</section>
+
+<!-- Footer -->
+
+  <footer class="footer">
+      <div class="content has-text-centered has-text-grey-lighter">
+        <p>
+          <strong id="footer-title">Mturk Guide</strong> by <a href="https://www.mturkcrowd.com/members/tsolo315.27/" target="_blank">TSolo315</a>. 2019 © All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+  </body>
+</html>

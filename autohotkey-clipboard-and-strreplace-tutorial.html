@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138864817-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138864817-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn how to best utilize the clipboard when writing AutoHotkey scripts and how to replace specified pieces of text.">
+    <title>Clipboard and StrReplace</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/prism.js"></script>
+  </head>
+  <body class="main">
+
+<!--Navigation Bar-->
+
+<nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+      <img src="images/mglogo.png" width="120" height="30">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBase">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBase" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">
+        Home
+      </a>
+
+      <a class="navbar-item" href="getting-started.html">
+        Getting Started
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="scripts.html">
+          Scripts
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="scripts.html">
+            Script Guide
+          </a>
+          <a class="navbar-item" href="primary-scripts.html">
+            Primary Scripts
+          </a>
+          <a class="navbar-item" href="accessory-scripts.html">
+            Accessory Scripts
+          </a>
+        </div>
+      </div>
+      <a class="navbar-item" href="leveling-up.html">
+        Leveling Up
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link is-active" href="autohotkey-tutorials-overview.html">
+          Tutorials
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="autohotkey-tutorials-overview.html">
+            AutoHotkey
+          </a>
+        </div>
+      </div>
+
+      <a class="navbar-item" href="approval-rating-calculator.html">
+        Approval Rating Calculator
+      </a>
+
+    </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a id="contact-me" class="button is-light" href="contact-me.html">
+              <span class="icon">
+                <i class="fa fa-envelope fa-lg"></i>
+              </span>
+              &nbsp;&nbsp;Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Burger JScript -->
+  <script type="text/javascript">
+    (function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#'+burger.dataset.target);
+
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
+
+<!-- Breadcrumb -->
+
+<section class="section">
+  <div class="container">
+      <nav class="breadcrumb add-extra-padding-top" aria-label="breadcrumbs">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="autohotkey-tutorials-overview.html">Tutorials for Turkers: AutoHotkey</a></li>
+              <li class="is-active"><a href="#" aria-current="page">Clipboard and StrReplace</a></li>
+          </ul>
+      </nav>
+  </div>
+</section>
+
+<!-- Author -->
+
+<section class="section no-padding-horizontal no-padding-vertical">
+    <div class="container">
+        <article class="media center-it">
+            <figure class="media-left">
+                <figure class="image is-64x64 no-margin-horizontal">
+                    <img src="images/testa6464.png">
+                </figure>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>TSolo315</strong>
+                        <a href="https://www.mturkcrowd.com/members/tsolo315.27/">MturkCrowd</a><br>
+                        <span class="has-text-grey">Six years of turking experience<br>
+                        <time datetime="2019-06-22">Published: 06/22/2019</time></span>
+                    </p>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- Content -->
+
+<section class="section has-background-grey-lighter add-flex no-padding-top">
+    <div class="container">
+        <h1 class="title">Clipboard and StrReplace</h1>
+        <p class="subtitle">Copy and alter text</p>
+        <div class="content">
+        <div class="numberCircle">1</div> <p class="tutorialText">Clipboard</p><br />
+        <p class="tutorialFollow">As we have discussed in earlier tutorials, clipboard is a built in variable tied to the current contents of your clipboard (content you have copied). Here is a refresher on several methods to alter clipboard contents: </p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+clipboard := "my text"   ; Give the clipboard entirely new contents.
+clipboard := ""   ; Empty the clipboard.
+clipboard := clipboard " Mturk AHK Script"   ; Append some text to the clipboard.
+clipboard := StrReplace(Clipboard, "apple", "orange") ; Replaces all instances of apple in a string in your clipboard with orange.
+</code>
+</pre>
+</div>
+        <p class="tutorialFollow">These methods should make more sense to you after finishing the variables tutorial. In essence, you are simply editing the content of a variable. The clipboard variable is special because it has the additional effect of also editing the contents of your computer clipboard.</p>
+        <div class="numberCircle">2</div> <p class="tutorialText">Clipwait</p><br />
+        <p class="tutorialFollow">There is a short amount of time required for your computer to copy something to the clipboard. If you don't add a wait time, it's possible for the script to continue before the content is properly copied. Using the clipwait command improves script reliability by forcing the script to wait until the content is copied before continuing. It's good practice to use the following whenever copying content with a hotkey:</p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+clipboard := "" ; Empty the clipboard. This allows clipwait to work, as it checks to see if text has been added.
+sendinput ^c ; Copy highlighted text.
+clipwait, 5 ; Wait for text to be copied to clipboard. You can add an options number (5 in this case) as a maximum waiting time. If the waiting time exceeds this AHK will change ErrorLevel status.
+</code>
+</pre>
+</div>
+        <div class="numberCircle">3</div> <p class="tutorialText">StrReplace</p><br />
+        <p class="tutorialFollow">StrReplace replaces the specified substring with a new string. This can be used to alter the text content of any variable, including clipboard. The format is as follows: <b>myNewVar := StrReplace(myOldVar, "text to replace", "text to replace it with")</b>. myNewVar is the name of the variable the result will be stored in, and myOldVar is the name of the source variable. These can both be the same, meaning the edited result will be saved to the source variable. A few examples: </p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+clipboard := StrReplace(clipboard, "apple", "orange") ; Replaces all instances of apple in a string in your clipboard with orange.
+AlteredText := StrReplace(clipboard, "surveys", "batches") ; Takes the contents of your clipboard, replaces all instances of the word surveys with the word batches, and saves the result in a new variable called AlteredText.
+AlteredText := StrReplace(AlteredText, "clicking", "scripting") ; Replaces all instances of the word clicking found in the AlteredText variable with the word scripting.
+</code>
+</pre>
+</div>
+        <p class="tutorialFollow">You can also use StrReplace to remove a substring by only providing the substring you would like removed.</p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+clipboard := StrReplace(clipboard, "surveys") ; Removes all instances of the word surveys from your clipboard.
+</code>
+</pre>
+</div>
+        <div class="numberCircle">4</div> <p class="tutorialText">Special Characters</p><br />
+        <p class="tutorialFollow">In AHK spaces and tabs have unique markup that can used when attempting to edit them. A_Space is a special variable containing a single space character, and A_Tab is a special variable containing a single tab character. If you wanted to replace all spaces in a string in your clipboard with dashes (-), you can use A_Space. <b>clipboard := StrReplace(clipboard, A_Space, "-")</b>. Because A_Space is a variable it is not surrounded by quotation marks like a string (text) would be. You can use variables in place of strings if the variable is given a string value. This can be useful if you have to use a certain string multiple times as it allows you to assign the string to a variable once and then simply use that variable in place of the string whenever necessary. The same effect could be achieved without the A_Space variable by using a string containing a single space: <b>clipboard := StrReplace(clipboard, " ", "-")</b>.</p>
+        <div class="numberCircle">5</div> <p class="tutorialText">Removing Line Breaks</p><br />
+        <p class="tutorialFollow">When copying multiple lines of text it's often necessary to remove the line breaks to avoid AHK sending them as enter presses when using the sendinput command. This isn't necessary when only altering the clipboard but is important when using self-defined variables. You can use StrReplace to remove line breaks:</p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+myVar := StrReplace(myVar, "`r`n")
+myVar := StrReplace(myVar, "`r")
+myVar := StrReplace(myVar, "`n")
+</code>
+</pre>
+</div>
+        <div class="numberCircle">6</div> <p class="tutorialText">Practical Example</p><br />
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+^9::
+click 2 ; Double click.
+clipboard := "" ; Empty the clipboard.
+sendinput ^c ; Copy highlighted text.
+clipwait, 5 ; Wait for text to be copied.
+clipboard := StrReplace(clipboard, " at ", "@")
+clipboard := StrReplace(clipboard, "-at-", "@")
+clipboard := StrReplace(clipboard, "_at_", "@")
+clipboard := StrReplace(clipboard, "  at  ", "@")
+clipboard := StrReplace(clipboard, "-@-", "@")
+clipboard := StrReplace(clipboard, "_@_", "@")
+return
+</code>
+</pre>
+</div>
+        <p class="tutorialFollow add-padding-bottom">If you were working on a batch that involved collecting email addresses you may find that many websites attempt to obscure these addresses (to  avoid them getting picked up by bots). This script will replace several variations of an obscured @ character with the plain @ character.</p>
+        <a class="button is-dark is-medium is-pulled-right" href="autohotkey-expressions-tutorial.html">Next Tutorial: Expressions</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+
+  <footer class="footer">
+      <div class="content has-text-centered has-text-grey-lighter">
+        <p>
+          <strong id="footer-title">Mturk Guide</strong> by <a href="https://www.mturkcrowd.com/members/tsolo315.27/" target="_blank">TSolo315</a>. 2019 © All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+  </body>
+</html>

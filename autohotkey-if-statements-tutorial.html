@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138864817-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138864817-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn how to use autohotkey if statements to add conditional commands to your hotkeys.">
+    <title>AutoHotkey If Statements Tutorial</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/prism.js"></script>
+  </head>
+  <body class="main">
+
+<!--Navigation Bar-->
+
+<nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+      <img src="images/mglogo.png" width="120" height="30">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBase">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBase" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">
+        Home
+      </a>
+
+      <a class="navbar-item" href="getting-started.html">
+        Getting Started
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="scripts.html">
+          Scripts
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="scripts.html">
+            Script Guide
+          </a>
+          <a class="navbar-item" href="primary-scripts.html">
+            Primary Scripts
+          </a>
+          <a class="navbar-item" href="accessory-scripts.html">
+            Accessory Scripts
+          </a>
+        </div>
+      </div>
+      <a class="navbar-item" href="leveling-up.html">
+        Leveling Up
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link is-active" href="autohotkey-tutorials-overview.html">
+          Tutorials
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="autohotkey-tutorials-overview.html">
+            AutoHotkey
+          </a>
+        </div>
+      </div>
+
+      <a class="navbar-item" href="approval-rating-calculator.html">
+        Approval Rating Calculator
+      </a>
+
+    </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a id="contact-me" class="button is-light" href="contact-me.html">
+              <span class="icon">
+                <i class="fa fa-envelope fa-lg"></i>
+              </span>
+              &nbsp;&nbsp;Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Burger JScript -->
+  <script type="text/javascript">
+    (function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#'+burger.dataset.target);
+
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
+
+<!-- Breadcrumb -->
+
+<section class="section">
+  <div class="container">
+      <nav class="breadcrumb add-extra-padding-top" aria-label="breadcrumbs">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="autohotkey-tutorials-overview.html">Tutorials for Turkers: AutoHotkey</a></li>
+              <li class="is-active"><a href="#" aria-current="page">If Statements</a></li>
+          </ul>
+      </nav>
+  </div>
+</section>
+
+<!-- Author -->
+
+<section class="section no-padding-horizontal no-padding-vertical">
+    <div class="container">
+        <article class="media center-it">
+            <figure class="media-left">
+                <figure class="image is-64x64 no-margin-horizontal">
+                    <img src="images/testa6464.png">
+                </figure>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>TSolo315</strong>
+                        <a href="https://www.mturkcrowd.com/members/tsolo315.27/">MturkCrowd</a><br>
+                        <span class="has-text-grey">Six years of turking experience<br>
+                        <time datetime="2019-08-15">Published: 08/15/2019</time></span>
+                    </p>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- Content -->
+
+<section class="section has-background-grey-lighter add-flex no-padding-top">
+    <div class="container">
+        <h1 class="title">If Statements</h1>
+        <p class="subtitle">Conditional expressions.</p>
+        <div class="content">
+        <div class="numberCircle">1</div> <p class="tutorialText">What is an "if statment?"</p><br />
+        <p class="tutorialFollow">An if statement allows you to tell AutoHotkey to run a chunk of code only if a given condition is met (if it evaluates to True). This is very powerful, allowing you to significantly increase the versatility of your scripts. If statements follow the format <b>if (expression) {code}</b> with expression being the condition you are checking -- in the form of an expression, and code being the code you want to run if the condition is met. Here are a few simple examples:</p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+if (followers > views)
+{
+    clipboard := "Too many followers"
+    return
+}
+
+
+if (Color = "Blue" or Color = "White")
+{
+    MsgBox The color is one of the allowed values.
+    return
+}
+
+
+if dividend { ; You can simply leave a variable name and if it evaluates to true the code will run.
+  clipboard := "There is a dividend"
+}
+</code>
+</pre>
+</div>
+        <div class="numberCircle">2</div> <p class="tutorialText">More on Booleans</p><br />
+        <p class="tutorialFollow">When an expression is required to evaluate to true or false (such as an if statement), a blank or zero result is considered false and all other results are considered true. So the if statement <b>if (5 + 7)</b> would return true and the following code would run. If a variable doesn't exist it will return false. Operators like >, =, <, will will return true or false depending on the result.</p>
+        <div class="numberCircle">3</div> <p class="tutorialText">NOT, AND, OR</p><br />
+        <p class="tutorialFollow">There are a few special operators you can use with if statements:</p>
+        <div class="content">
+          <ul>
+            <li class="tutorialFollow">The not operator checks for false instead of true. <b>if not (Batches + Surveys = 20)</b></li>
+            <li class="tutorialFollow">The and operator checks if all statements provided evaluate to true. <b>if (apples = 20 and bananas = 20)</b></li>
+            <li class="tutorialFollow">The or operator checks if ONE of the statements provided evaluates to true <b>if (apples = 20 or bananas = 20)</b></li>
+          </ul>
+        </div>
+        <div class="numberCircle">4</div> <p class="tutorialText">Else and else if</p><br />
+        <p class="tutorialFollow">Directly following an if statement you can have else if statements or an else statement. Else if statements will be checked if the original if statement condition was NOT met, and if no preceding else if statement conditions were met. Else statements are not followed by an expression and will run if the original if and all preceding else if statement conditions fail. Here is an example:</p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+if (Color = "Green" or Color = "Cyan")
+{
+    MsgBox The color is one of the allowed values.
+    return
+}
+else if (Color = "Gold") ; checked if initial if statement fails.
+{
+    MsgBox Gold is not an allowed color.
+    return
+}
+else if (Color = "Silver") ; checked if initial if statement and preceding else if statement fails.
+{
+    MsgBox Silver is not an allowed color.
+    return
+}
+else ; runs if all previous statements fail.
+{
+    MsgBox This color is not recognized.
+    return
+}
+</code>
+</pre>
+</div>
+        <div class="numberCircle">5</div> <p class="tutorialText">Practical Example.</p><br />
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+f1::
+click 2 ; Double click.
+clipboard := "" ; Empty the clipboard.
+sendinput ^c ; Copy highlighted text.
+clipwait, 5 ; Wait for text to be copied.
+result := clipboard ; Set result variable to clipboard contents.
+if (result = "Painting" or result = "Song" or result = "Book")
+{
+  Category := "Artist"
+}
+else if (result = "Basketball" or result = "Soccer" or result = "Football" or result = "Tennis")
+{
+  Category := "Athlete"
+}
+else if (result = "Actor" or result = "Actress" or result = "Comedian")
+{
+  Category := "Performer"
+}
+else {
+  Category := "NA"
+}
+sendinput ^w ; close tab.
+sendinput {tab} ; send tab press.
+sendinput %Category% ; send category variable.
+return
+</code>
+</pre>
+</div>
+        <p class="tutorialFollow">Assume a hit asked you to visit the profile of a celebrity and return in what field they received their claim to fame. A script like this would allow you to hover over a keyword and click a hotkey, allowing AHK to handle the rest.</p>
+        <a class="button is-dark is-medium is-pulled-right" href="autohotkey-loops-tutorial.html">Next Tutorial: Loops</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+
+  <footer class="footer">
+      <div class="content has-text-centered has-text-grey-lighter">
+        <p>
+          <strong id="footer-title">Mturk Guide</strong> by <a href="https://www.mturkcrowd.com/members/tsolo315.27/" target="_blank">TSolo315</a>. 2019 © All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+  </body>
+</html>

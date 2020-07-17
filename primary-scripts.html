@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138864817-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138864817-1');
+    </script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A collection of the most useful Mturk scripts.">
+    <title>Primary Scripts</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body class="main">
+
+<!--Navigation Bar-->
+
+<nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+      <img src="images/mglogo.png" width="120" height="30">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBase">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBase" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">
+        Home
+      </a>
+
+      <a class="navbar-item" href="getting-started.html">
+        Getting Started
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link is-active" href="scripts.html">
+          Scripts
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="scripts.html">
+            Script Guide
+          </a>
+          <a class="navbar-item is-active">
+            Primary Scripts
+          </a>
+          <a class="navbar-item" href="accessory-scripts.html">
+            Accessory Scripts
+          </a>
+        </div>
+      </div>
+      <a class="navbar-item" href="leveling-up.html">
+        Leveling Up
+      </a>
+ 
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="autohotkey-tutorials-overview.html">
+          Tutorials
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="autohotkey-tutorials-overview.html">
+            AutoHotkey
+          </a>
+        </div>
+      </div>
+
+      <a class="navbar-item" href="approval-rating-calculator.html">
+        Approval Rating Calculator
+      </a>
+
+    </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a id="contact-me" class="button is-light" href="contact-me.html">
+              <span class="icon">
+                <i class="fa fa-envelope fa-lg"></i>
+              </span>
+              &nbsp;&nbsp;Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Burger JScript -->
+  <script type="text/javascript">
+    (function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#'+burger.dataset.target);
+
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
+
+<!-- Breadcrumb -->
+
+    <section class="section">
+        <div class="container">
+            <nav class="breadcrumb add-extra-padding-top" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="scripts.html">Scripts</a></li>
+                    <li class="is-active"><a href="#" aria-current="page">Primary Scripts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+<!-- Author -->
+
+    <section class="section no-padding-horizontal no-padding-vertical">
+        <div class="container">
+            <article class="media center-it">
+                <figure class="media-left">
+                    <figure class="image is-64x64 no-margin-horizontal">
+                        <img src="images/testa6464.png">
+                    </figure>
+                </figure>
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>TSolo315</strong>
+                            <a href="https://www.mturkcrowd.com/members/tsolo315.27/">MturkCrowd</a><br>
+                            <span class="has-text-grey">Six years of turking experience<br>
+                            <time datetime="2019-04-20">Published: 04/20/2019</time></span>
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+<!-- Content -->
+
+<section class="section has-background-grey-lighter add-flex no-padding-top">
+  <div class="container">
+    <h1 class="title">Primary Scripts</h1>
+    <p class="subtitle">The best free scripts available to turkers</p>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/MTS800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://chrome.google.com/webstore/detail/mturk-suite/iglbakfobmoijpbigmlfklckogbefnlf?hl=en-US" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">Mturk Suite</h1></a>
+        Mturk Suite is currently the most widely used Mechanical Turk script. It offers a variety of useful features including a customizable HIT scraper, a Panda manager, and a completed HIT tracker, as well as several quality of life changes to the Mechanical Turk site. This is the first script I would recommend most people download and learn how to use. This alone can significantly increase your turking proficiency.
+        <br /><br />
+        Documentation: <a href="https://github.com/Kadauchi/mturk-suite/wiki" target=_blank>https://github.com/Kadauchi/mturk-suite/wiki</a>
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/PC800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://greasyfork.org/en/scripts/19168-jr-mturk-panda-crazy" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">Panda Crazy</h1></a>
+        Panda Crazy is a feature rich Panda manager that allows for further Panda customization than other available scripts offer, including the one offered by Mturk Suite. Mastering the art of Pandas can really help you catch the best HITs Mturk has to offer, and this script can help.
+        <br /><br />
+        Documentation: <a href="http://pandacrazy.allbyjohn.com/" target=_blank>http://pandacrazy.allbyjohn.com/</a>
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/TV800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://turkerview.com/mturk-scripts/1-turkerviewjs" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">Turkerview</h1></a>
+        Turkerview is a review platform which allows users to leave reviews for both HITs and requesters. Installing this script will allow review information to be displayed direcectly on Mechanical Turk. This can really help you determine which HITs are worth doing and which ones to avoid.
+        <br /><br />
+        Documentation: <a href="https://turkerview.com/" target=_blank>https://turkerview.com/</a>
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/OW800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://greasyfork.org/en/scripts/24464-overwatch-for-worker-mturk" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">Overwatch</h1></a>
+        Overwatch is a dedicated HIT watcher. It provides several features to alert you when designated HITs or requesters post on Mturk.
+        <br /><br />
+        Documentation: <a href="https://forum.turkerview.com/wiki/Overwatch-for-worker-mturk" target=_blank>https://forum.turkerview.com/wiki/Overwatch-for-worker-mturk</a>
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/ME800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://greasyfork.org/en/scripts/33403-mturk-engine" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">Mturk Engine</h1></a>
+        Mturk engine offers a suite of tools to help you find, catch, and manage HITs. Among these tool are a HIT scraper, Panda manager, HIT tracker, and a queue manager. All features are contained in a clean, easily navigatable user interface. 
+        <br /><br />
+        Documentation: <a href="https://github.com/Anveio/mturk-engine#readme" target=_blank>https://github.com/Anveio/mturk-engine</a>
+    </div></div>
+    <div class="columns has-divider-bottom">
+      <div class="column is-one-third">
+        <figure class="image is-3by2">
+            <img src="images/TO800533.png">
+          </figure>
+      </div>
+      <div class="column is-two-thirds">
+        <a href="https://greasyfork.org/en/scripts/4391-turkopticon" target=_blank><h1 class="title is-5 add-padding-bottom add-padding-top has-text-link">Turkopticon</h1></a>
+        The original Mechanical Turk HIT review service. Turkopticon allows users to review HITs or requesters and will display review information directly on Mturk. While Turkopticon as fallen out of use lately due to the rise of Turkerview, it is still a valuable resource (although I would only install one or the other.) 
+        <br /><br />
+        Documentation: <a href="https://turkopticon.info/" target=_blank>https://turkopticon.info/</a>
+    </div></div>
+  </div>
+</section>
+
+<!-- Footer -->
+
+  <footer class="footer">
+      <div class="content has-text-centered has-text-grey-lighter">
+        <p>
+          <strong id="footer-title">Mturk Guide</strong> by <a href="https://www.mturkcrowd.com/members/tsolo315.27/" target="_blank">TSolo315</a>. 2019 © All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+  </body>
+</html>

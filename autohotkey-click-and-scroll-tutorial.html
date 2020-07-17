@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138864817-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138864817-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn how to use the AutoHotkey click and scroll commands.">
+    <title>Click and Scroll</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/prism.js"></script>
+  </head>
+  <body class="main">
+
+<!--Navigation Bar-->
+
+<nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+      <img src="images/mglogo.png" width="120" height="30">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBase">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBase" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">
+        Home
+      </a>
+
+      <a class="navbar-item" href="getting-started.html">
+        Getting Started
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="scripts.html">
+          Scripts
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="scripts.html">
+            Script Guide
+          </a>
+          <a class="navbar-item" href="primary-scripts.html">
+            Primary Scripts
+          </a>
+          <a class="navbar-item" href="accessory-scripts.html">
+            Accessory Scripts
+          </a>
+        </div>
+      </div>
+      <a class="navbar-item" href="leveling-up.html">
+        Leveling Up
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link is-active" href="autohotkey-tutorials-overview.html">
+          Tutorials
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="autohotkey-tutorials-overview.html">
+            AutoHotkey
+          </a>
+        </div>
+      </div>
+
+      <a class="navbar-item" href="approval-rating-calculator.html">
+        Approval Rating Calculator
+      </a>
+
+    </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a id="contact-me" class="button is-light" href="contact-me.html">
+              <span class="icon">
+                <i class="fa fa-envelope fa-lg"></i>
+              </span>
+              &nbsp;&nbsp;Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Burger JScript -->
+  <script type="text/javascript">
+    (function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#'+burger.dataset.target);
+
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
+
+<!-- Breadcrumb -->
+
+<section class="section">
+  <div class="container">
+      <nav class="breadcrumb add-extra-padding-top" aria-label="breadcrumbs">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="autohotkey-tutorials-overview.html">Tutorials for Turkers: AutoHotkey</a></li>
+              <li class="is-active"><a href="#" aria-current="page">Click and Scroll</a></li>
+          </ul>
+      </nav>
+  </div>
+</section>
+
+<!-- Author -->
+
+<section class="section no-padding-horizontal no-padding-vertical">
+    <div class="container">
+        <article class="media center-it">
+            <figure class="media-left">
+                <figure class="image is-64x64 no-margin-horizontal">
+                    <img src="images/testa6464.png">
+                </figure>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>TSolo315</strong>
+                        <a href="https://www.mturkcrowd.com/members/tsolo315.27/">MturkCrowd</a><br>
+                        <span class="has-text-grey">Six years of turking experience<br>
+                        <time datetime="2019-06-18">Published: 06/18/2019</time></span>
+                    </p>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- Content -->
+
+<section class="section has-background-grey-lighter add-flex no-padding-top">
+    <div class="container">
+        <h1 class="title">Click and Scroll</h1>
+        <p class="subtitle">Simulate mouse clicks and page scrolling</p>
+        <div class="content">
+        <div class="numberCircle">1</div> <p class="tutorialText">Click</p><br />
+        <p class="tutorialFollow">The AHK click command can be used to simulate a mouse click (right or left) at your mouse pointer. Screen coordinates can also be provided to click at the given coordinates. To send a single left click simply use the command <b>click</b>. If you wanted to click twice you would write <b>click 2</b>. To send a right click use <b>click right</b>. To click at specified coordinates use <b>click 100, 100</b> (or <b>click right 100, 100</b>). The first number is the X coordinate and the second is the Y coordinate. Coordinates are relative to the active window. If you want to click multiple times at the specified coordinates add a click count <b>click 200, 200, 3</b>. </p>
+        <div class="numberCircle">2</div> <p class="tutorialText">Taking Advantage of the Click Command</p><br />
+        <p class="tutorialFollow">There are several practical applications for using the click command. The default behaviour of double clicking plain text in a web browser is often to highlight the entire word (tripple clicking will highlight the entire section). You can use this in a script to allow you to copy words or sections by hovering your pointer over them and using a hotkey. Here is an example:</p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+f1::
+click 2 ; double click
+sendinput ^c ; copy the text
+sendinput ^t ; open a new tab
+sleep 200 ; short sleep
+sendinput ^v ; paste (focus normally defaults to the address bar when a new tab is opened)
+sleep 100 ; short sleep
+sendinput {enter} ; enter press
+return
+</code>
+</pre>
+</div>
+        <p class="tutorialFollow">The default behavior of most browsers when you send a term in the address bar is to search for it using your default search engine. This script will copy the word under your cursor, open a new tab, and search for that word in that tab.<br /><br /> The click command can also be used to make sure a certain part of the page is focused before running the rest of the commands for a given hotkey. Pressing the tab key will focus the next field starting from the last place you clicked so you can use this behavior to control where a tab press will initially focus. You can also use <b>click right</b> to send a right click and then use the <b>up</b> and <b>down</b> keys to navigate the right click context menu.</p>
+        <div class="numberCircle">3</div> <p class="tutorialText">Scrolling</p><br />
+        <p class="tutorialFollow">Page scrolling can be simulated using the command <b>click wheelup</b> or <b>click wheeldown</b>. Just like standard click command you can set a number after the wheelup or wheeldown command to determine how far you will scroll: <b>wheeldown 20</b>. Practical uses of scrolling include scrolling down a specified amount after a hotkey runs, or scrolling  all the way to the top of the page. An alternate way to send this command is by using <b>sendinput {wheeldown 20}</b>.</p>
+        <div class="numberCircle">4</div> <p class="tutorialText">Practical Example</p><br />
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+f2:
+click 3 ; tripple click
+sendinput ^c ; copy
+sendinput ^+{tab} ; control-shift-tab to switch to previous tab
+sendinput {tab} ; tab press to jump to next field (like a text input)
+sendinput ^v ; paste
+sendinput ^{tab} ; control-tab to switch to next tab
+click wheeldown 50 ; scroll down 50 clicks
+return
+</code>
+</pre>
+</div>
+        <p class="tutorialFollow add-padding-bottom">A script like this might help in a sitation where you are gathering data from a given website to paste into text fields in a HIT. the f2 hotkey would copy the section under your cursor, switch to the previous tab (the tab with the HIT in it), send a tab press to jump to the next field, paste the info, switch back to the website tab, and finally scroll down the page (ideally to where you would need to grab the next piece of information).</p>
+        <a class="button is-dark is-medium is-pulled-right" href="autohotkey-variable-basics.html">Next Tutorial: Variable Basics</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+
+  <footer class="footer">
+      <div class="content has-text-centered has-text-grey-lighter">
+        <p>
+          <strong id="footer-title">Mturk Guide</strong> by <a href="https://www.mturkcrowd.com/members/tsolo315.27/" target="_blank">TSolo315</a>. 2019 © All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+  </body>
+</html>

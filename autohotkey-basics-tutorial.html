@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138864817-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138864817-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The basics on writing scripts in AHK. Learn about sending keystrokes, sleep times, comments, and interacting with the clipboard.">
+    <title>AutoHotkey Basics Tutorial</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/prism.js"></script>
+  </head>
+  <body class="main">
+
+<!--Navigation Bar-->
+
+<nav class="navbar is-fixed-top is-warning" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+      <img src="images/mglogo.png" width="120" height="30">
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBase">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBase" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="index.html">
+        Home
+      </a>
+
+      <a class="navbar-item" href="getting-started.html">
+        Getting Started
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="scripts.html">
+          Scripts
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="scripts.html">
+            Script Guide
+          </a>
+          <a class="navbar-item" href="primary-scripts.html">
+            Primary Scripts
+          </a>
+          <a class="navbar-item" href="accessory-scripts.html">
+            Accessory Scripts
+          </a>
+        </div>
+      </div>
+      <a class="navbar-item" href="leveling-up.html">
+        Leveling Up
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link is-active" href="autohotkey-tutorials-overview.html">
+          Tutorials
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="autohotkey-tutorials-overview.html">
+            AutoHotkey
+          </a>
+        </div>
+      </div>
+
+      <a class="navbar-item" href="approval-rating-calculator.html">
+        Approval Rating Calculator
+      </a>
+
+    </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a id="contact-me" class="button is-light" href="contact-me.html">
+              <span class="icon">
+                <i class="fa fa-envelope fa-lg"></i>
+              </span>
+              &nbsp;&nbsp;Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Burger JScript -->
+  <script type="text/javascript">
+    (function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#'+burger.dataset.target);
+
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
+
+<!-- Breadcrumb -->
+
+<section class="section">
+  <div class="container">
+      <nav class="breadcrumb add-extra-padding-top" aria-label="breadcrumbs">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="autohotkey-tutorials-overview.html">Tutorials for Turkers: AutoHotkey</a></li>
+              <li class="is-active"><a href="#" aria-current="page">AutoHotkey Basics</a></li>
+          </ul>
+      </nav>
+  </div>
+</section>
+
+<!-- Author -->
+
+<section class="section no-padding-horizontal no-padding-vertical">
+    <div class="container">
+        <article class="media center-it">
+            <figure class="media-left">
+                <figure class="image is-64x64 no-margin-horizontal">
+                    <img src="images/testa6464.png">
+                </figure>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>TSolo315</strong>
+                        <a href="https://www.mturkcrowd.com/members/tsolo315.27/">MturkCrowd</a><br>
+                        <span class="has-text-grey">Six years of turking experience<br>
+                        <time datetime="2019-05-26">Published: 05/26/2019</time></span>
+                    </p>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- Content -->
+
+<section class="section has-background-grey-lighter add-flex no-padding-top">
+    <div class="container">
+        <h1 class="title">AutoHotkey Basics</h1>
+        <p class="subtitle">Learning the fundamentals.</p>
+        <div class="content">
+        <div class="numberCircle">1</div> <p class="tutorialText">Setting Hotkeys.</p><br />
+        <p class="tutorialFollow">As you learned in the previous tutorial, hotkeys are set using the following format: <b>hotkey</b>:: . You also learned that the ^ character stood for the control button. Here are some other common characters used in AHK:</p>
+        <div class="content">
+            <ul>
+              <li class="tutorialFollow">The # character is used for the Win (windows logo) key.</li>
+              <li class="tutorialFollow">The ! character is used for the Alt key.</li>
+              <li class="tutorialFollow">The + character is used for the Shift key.</li>
+            </ul>
+          </div>
+        <p class="tutorialFollow">So <b>!+z::</b> would stand for Alt-Shift-Z.</p>
+        <div class="numberCircle">2</div> <p class="tutorialText">Sending Text and Keystrokes.</p><br />
+        <p class="tutorialFollow">You have learned that text is sent using the sendinput command. You can also use the special characters above to send key combinations. For example <b>sendinput ^t</b> would send the key combination Control-T. If you want to send a keypress that is not a common letter or number, you have to surround that key in curly brackets. For example <b>sendinput {tab}</b> represents a tab key press. Common keys used this way are {tab}, {enter}, {space}, {ctrl}, {up}, {down}, {left}, {right}. You can also individually set key down and key up commands, allowing you to press several other keys in between a key being pressed down and the key being released. For example:</p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+^t::
+sendinput {ctrl down}tr55{ctrl up}
+return
+</code>
+</pre>
+</div>
+        <div class="numberCircle">3</div> <p class="tutorialText">Adding a Pause.</p><br />
+        <p class="tutorialFollow">Scripts made in AutoHotkey run very fast. They often run too fast. If you have a script that opens a new tab in your web browser and then directs you to a new webpage -- a pause is required to allow for the browser to load the webpage before you can issue any commands interacting with it. Without a pause, the script will send commands while the page is loading and it won't work correctly. You can add a pause to your script by using the <b>sleep</b> command. <b>sleep 2000</b> would pause your script for two seconds (time is set in milliseconds.) </p>
+        <div class="numberCircle">4</div> <p class="tutorialText">Interacting with the Clipboard.</p><br />
+        <p class="tutorialFollow">Using the clipboard (where information is saved to when you use copy in windows) is often a necessity when writing AHK scripts for Mechanical Turk HITs. Luckily, AHK makes it easy with a built in <i>variable</i> conveniently named "clipboard." This variable holds the current contents of your clipboard and can be used to retrieve those contents or to change them. This becomes particularly useful when working with custom variables, which we will discuss in a later tutorial. Here are some ways you can interact with the clipboard: </p>
+<div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+clipboard := "my text"   ; Give the clipboard entirely new contents.
+clipboard := ""   ; Empty the clipboard.
+clipboard := clipboard " Mturk AHK Script"   ; Append some text to the clipboard.
+StringReplace, clipboard, clipboard, ABC, DEF, All   ; Replace all occurrences of ABC with DEF (also converts the clipboard to plain text).
+</code>
+</pre>
+</div>
+        <p class="tutorialFollow">We will go over methods involving the clipboard in more detail in later tutorials.</p>
+        <div class="numberCircle">5</div> <p class="tutorialText">Adding a Comment</p><br />
+        <p class="tutorialFollow">Adding comments to your scripts can help you remember what exactly certain code snippets are meant to do. While you may think you have a good memory and can keep it all in your head, it's not uncommon for even experienced programmers to come back to code they had written months ago and not remember exactly what does what. Adding comments is easy: all you have to do is add a semicolon <b>;</b> and anything on the line afterward will be considered a comment and will not affect your code. Comments can be seen in the clipboard examples above detailing what each line of code will do. </p>
+        <div class="numberCircle">6</div> <p class="tutorialText">Working with default Windows/Browser Hotkeys</p><br />
+        <p class="tutorialFollow">Taking advantage of built in windows or browser hotkeys can save you a lot of time and effort. For example, in a browser, sending the hotkey Control-C will copy whatever is currently highlighted, Control-V will then paste that copied information. Control-T will open a new empty browser tab, Control-L will place your cursor in your browsers address bar, Control-Tab will switch to the next tab, Control-Shift-Tab will switch to the previous tab. Here are a few hotkey overviews:</p>
+        <div class="content">
+            <ul>
+              <li class="tutorialFollow"><a href="https://www.computerhope.com/shortcut/chrome.htm" target="_blank">Chrome</a></li>
+              <li class="tutorialFollow"><a href="https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly" target="_blank">Firefox</a></li>
+              <li class="tutorialFollow"><a href="https://support.microsoft.com/en-us/help/12445/windows-keyboard-shortcuts" target="_blank">Windows</a></li>
+            </ul>
+        </div>
+        <div class="numberCircle">7</div> <p class="tutorialText">Review</p><br />
+        <p class="tutorialFollow">Here is a script that utilizes everything we have learned in this tutorial:</p>
+        <div class="content" style="margin-top: 10px; margin-left: 3.5em;">
+<pre>
+<code class="language-autohotkey">
+^8::
+sendinput ^t ; send a control-t keypress to open a new browser tab
+sleep 1000 ; sleep for a second to give the tab time to open
+sendinput https://worker.mturk.com ; input the mturk url in your address bar
+sendinput {enter} ; send an enter keypress
+sleep 4000 ; sleep for four seconds to give the page time to load
+sendinput ^a ; send control-a to select all text on screen
+sendinput ^c ; send control-c to copy all the text
+StringReplace, clipboard, clipboard, survey, bubbles, All ; replace all instances of the word survey with the word bubbles (in your clipboard)
+sleep 1000 ; sleep for a second
+sendinput ^l ; send the hotkey control-l to focus your cursor in the address bar
+sendinput https://www.rapidtables.com/tools/notepad.html ; input the link to a notepad website
+sendinput {enter} ; send an enter keypress
+sleep 3000 ; sleep for three seconds to give the page time to load
+sendinput ^v ; a control-v keypress to paste
+return
+</code>
+</pre>
+</div>
+        <p class="tutorialFollow add-padding-bottom">Perhaps not very practical but at this point you should start to see the potential for writing scripts to make HITs more efficient.</p>
+        <a class="button is-dark is-medium is-pulled-right" href="autohotkey-hotstring-tutorial.html">Next Tutorial: Hotstrings</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+
+  <footer class="footer">
+      <div class="content has-text-centered has-text-grey-lighter">
+        <p>
+          <strong id="footer-title">Mturk Guide</strong> by <a href="https://www.mturkcrowd.com/members/tsolo315.27/" target="_blank">TSolo315</a>. 2019 © All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+  </body>
+</html>
