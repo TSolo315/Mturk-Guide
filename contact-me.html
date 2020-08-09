@@ -104,23 +104,28 @@
   </script>
 <section class="section has-background-grey-lighter add-flex six-pad-top">
     <div class="container" style="max-width: 420px;">
+        <div class="contact-title" style="margin-bottom: 3em;">
+          <h1 class="title has-text-centered is-1">
+            Send me an email!
+          </h1>
+        </div>
         <div id="after_submit"></div>
         <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
             <div class="field">
                 <div class="control">
-                    <label class="required" for="name">Your name:</label><br />
+                    <label class="required label" for="name">Your name:</label>
                     <input id="name" class="input is-medium" name="name" type="text" placeholder="Name" /><br />
                     <span id="name_validation" class="error_message"></span>
             </div></div>
             <div class="field">
                 <div class="control">
-                    <label class="required" for="email">Your email:</label><br />
+                    <label class="required label" for="email">Your email:</label>
                     <input id="email" class="input is-medium" name="email" type="text" placeholder="me@example.com" /><br />
                     <span id="email_validation" class="error_message"></span>
             </div></div>
             <div class="field">
                 <div class="control">
-                    <label class="required" for="message">Your message:</label><br />
+                    <label class="required label" for="message">Your message:</label>
                     <textarea id="message" class="textarea" name="message" placeholder="Message"></textarea><br />
                     <span id="message_validation" class="error_message"></span>
             </div></div>

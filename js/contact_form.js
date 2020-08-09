@@ -33,6 +33,8 @@ $(document).ready(function(){
 	$('#contact_form').submit(function(event) {
 		event.preventDefault();
          $('.required').parent().find('.input').trigger('blur');
+         var $replace_quotes = $('#message').val().replace(/["']/g, "");
+         $('#message').val($replace_quotes);
         if (!errors)
             $.ajax({
                 url: 'contact.php',
