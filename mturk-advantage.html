@@ -1,14 +1,25 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<HTML>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>404 Not Found</title>
-<link rel="stylesheet" href="css/bulma.min.css">
-<link rel="stylesheet" href="css/style.css">
-<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-</head>
-<body class="main">
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138864817-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138864817-1');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A script to help you make more money on Mechanical Turk. Mturk Advantage contains several features not found in publicly available script for Mturk.">
+    <title>Mturk Advantage</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/jquery-3.4.0.min.js"></script>
+  </head>
+  <body class="main">
 
 <!--Navigation Bar-->
 
@@ -67,7 +78,7 @@
         </div>
       </div>
 
-      <a class="navbar-item" href="mturk-advantage.html">
+      <a class="navbar-item is-active" href="mturk-advantage.html">
         Mturk Advantage
       </a>
 
@@ -104,23 +115,37 @@
     })();
   </script>
 
-    <section class="section has-background-grey-lighter add-flex" style="padding-top: 6em">
-        <div class="container">
-            <h1 class="title">Not Found (404)</h1>
-            <p>
-                The requested URL was not found on this server. <br /><br /><strong><a href="index.html">HOME</a></strong>
-            </p>
-        </div>
-    </section>
-    
+<!-- Breadcrumb -->
+
+<section class="section">
+  <div class="container">
+      <nav class="breadcrumb add-extra-padding-top" aria-label="breadcrumbs">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li class="is-active"><a href="#" aria-current="page">Mturk Advantage</a></li>
+          </ul>
+      </nav>
+  </div>
+</section>
+
+<!-- Content -->
+
+<section class="section has-background-grey-lighter add-flex no-padding-top">
+    <div>
+        
+    </div>
+</section>
+
+
 <!-- Footer -->
 
   <footer class="footer">
-        <div class="content has-text-centered has-text-grey-lighter">
-          <p>
-            <strong id="footer-title">Mturk Guide</strong> by <a href="https://www.mturkcrowd.com/members/tsolo315.27/" target="_blank">TSolo315</a>. 2019 © All Rights Reserved.
-          </p>
-        </div>
-      </footer>
-</body>
-</HTML>
+      <div class="content has-text-centered has-text-grey-lighter">
+        <p>
+          <strong id="footer-title">Mturk Guide</strong> by <a href="https://www.mturkcrowd.com/members/tsolo315.27/" target="_blank">TSolo315</a>. 2019 © All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+  </body>
+</html>
