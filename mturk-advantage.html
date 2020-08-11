@@ -16,8 +16,10 @@
     <title>Mturk Advantage</title>
     <link rel="stylesheet" href="css/bulma.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="js/jquery-3.4.0.min.js"></script>
+    <script defer src="js/contact_form.js"></script>
   </head>
   <body class="main">
 
@@ -131,9 +133,55 @@
 <!-- Content -->
 
 <section class="section has-background-grey-lighter add-flex no-padding-top">
+  <div class="container">
     <div>
-        
+      <h1 class="title has-text-centered">Mturk Advantage</h1>
+      <p class="subtitle has-text-centered has-text-weight-semibold">A better way of grabbing HITs. Give yourself an edge over other turkers.</p>
+      <div class="columns mturk-advantage" style="margin-top: 1.5em;">
+        <div class="column is-half">
+          <p>Mturk Advantage is an application I created with the goal maximizing my personal turking efficiency. While the various free tools that are currently available are very helpful, their existence is a double edged sword. With thousands of people having installed these scripts, using them to grab HITs as soon as they are posted, the competition to get good HITs has become incredibly high. I needed something to give me an edge.</p>
+          </br>
+          <p>I finished an initial version of Mturk Advantage in early 2018 and with the help of a group of experienced turkers have been gradually improving it. At this point I am confident it would help most turkers significantly improve their earning potential while simultaneously easing some of the inconveniences that come with being a turker.</p>
+          </br>
+          <p>Unlike most turking tools, Mturk Advantage isn't a script you plug into a browser, but is a standalone application. It requires Windows and the Chrome browser to run (sorry Mac users.) I am offering MA as a service for the price of $25 a month. While this may understandably sound steep -- for serious turkers it will pay for itself and more. I don't expect people to take my word for it however, and so I am offering a two week trial period so you can see if it will be worthwhile for you.</p>
+        </div>
+        <div class="column is-half">
+          <figure class="image is-3by2">
+            <img src="images/Mturk_Advantage.png" alt="A screenshot of Mturk Advantage.">
+          </figure>
+        </div>
     </div>
+    <div class="mturk-advantage">
+      <p>Due to the nature of tools like this, the more people who have access the less effective they will be. For this reason I plan on limiting the number of concurrent users. If you're interested in learning more and potentially giving Mturk Advantage a try send me a message using the contact form found below. If no slots are currently available you will be added to a waiting list.</p>
+    </div>
+    <div class="centered-form">
+      <div class="form-heading">
+        <h1 class="title has-text-centered" style="margin-bottom: 1em;">Request a trial today!</h1>
+      </div>
+      <div id="after_submit"></div>
+          <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+              <div class="field">
+                  <div class="control">
+                      <label class="required label" for="name">Your name:</label>
+                      <input id="name" class="input is-medium" name="name" type="text" placeholder="Name" /><br />
+                      <span id="name_validation" class="error_message"></span>
+              </div></div>
+              <div class="field">
+                  <div class="control">
+                      <label class="required label" for="email">Your email:</label>
+                      <input id="email" class="input is-medium" name="email" type="text" placeholder="me@example.com" /><br />
+                      <span id="email_validation" class="error_message"></span>
+              </div></div>
+              <div class="field">
+                  <div class="control">
+                      <label class="required label" for="message">Short summary of your Mturk experience:</label>
+                      <textarea id="message" class="textarea" name="message" placeholder="Message"></textarea><br />
+                      <span id="message_validation" class="error_message"></span>
+              </div></div>
+              <input id="submit_button" type="submit" value="Send" />
+          </form>
+    </div>  
+  </div>
 </section>
 
 

@@ -85,12 +85,13 @@ input, textarea{
 
 #contact_form{
 	height: 450px;
-	background-color: rgb(53, 53, 53);
-	border: solid 1px rgb(253, 253, 253);
+    background-color: rgb(53, 53, 53);
+    border: solid 2px white;
     padding: 10px 20px 50px 20px;
-    -webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-    border-radius: 5px;
+}
+
+#contact_form:hover {
+    box-shadow: 2px 3px 3px rgba(10,10,10,.3); 
 }
 
 #contact_form label {
@@ -105,8 +106,7 @@ input#submit_button {
     border: 1px #3079ED solid;
     box-shadow: inset 0 1px 0 #80B0FB;
     font-weight: bold;
-    margin-top: -5px;
-    margin-left: 7px;
+    margin-top: -10px;
 }
 
 input#submit_button:hover {
@@ -118,17 +118,46 @@ input#submit_button:active {
     box-shadow: inset 0 2px 5px #2370FE;   
 }
 
+input.input {
+    background-color: rgba(178, 185, 201, 0.2);
+    color: white;
+}
+
+textarea.textarea {
+    background-color: rgba(178, 185, 201, 0.2);
+    color: white;
+}
+
+input.input::placeholder  {
+    color: #aaa;
+}
+
+
+textarea.textarea::placeholder {
+    color: #aaa;
+}
+
 label.required:after {
   content:'*';
-  color:red;
+  color:#d9534f ;
 }
 
 .error {
   background-color:rgb(53, 53, 53);
-  color:red;
+  color:#d9534f ;
 }
 .error_message{
   font-style: italic;
   font-weight: bold;
   font-size: 10px;
+}
+
+.mturk-advantage p {
+    font-size: 17px;
+}
+
+.centered-form {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 2em;
 }

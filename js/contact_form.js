@@ -33,11 +33,18 @@ $(document).ready(function(){
 	$('#contact_form').submit(function(event) {
 		event.preventDefault();
          $('.required').parent().find('.input').trigger('blur');
+         var fileName = location.href.split("/").slice(-1).toString(); 
+         console.log(fileName)
+         if (fileName.includes("mturk-advantage")) {
+            php_url = "contactMA.php"
+         } else {
+            php_url = "contact.php"
+         }
          var $replace_quotes = $('#message').val().replace(/["']/g, "");
          $('#message').val($replace_quotes);
         if (!errors)
             $.ajax({
-                url: 'contact.php',
+                url: php_url,
                 data: {
                     json: JSON.stringify($(this).serializeObject())
                 },

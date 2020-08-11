@@ -4,107 +4,111 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
   <loc>https://www.mturkguide.com/</loc>
-  <lastmod>2019-06-22T04:37:31+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:05+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/index.html</loc>
-  <lastmod>2019-06-22T04:37:31+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/getting-started.html</loc>
-  <lastmod>2019-06-22T21:39:32+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/scripts.html</loc>
-  <lastmod>2019-09-11T19:34:55+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/primary-scripts.html</loc>
-  <lastmod>2019-06-07T19:52:39+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/accessory-scripts.html</loc>
-  <lastmod>2019-06-22T21:22:07+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/leveling-up.html</loc>
-  <lastmod>2019-07-02T01:34:06+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/autohotkey-tutorials-overview.html</loc>
-  <lastmod>2019-10-10T02:46:29+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.mturkguide.com/mturk-advantage.html</loc>
+  <lastmod>2020-08-11T21:01:36+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/approval-rating-calculator.html</loc>
-  <lastmod>2019-06-18T18:12:20+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/contact-me.html</loc>
-  <lastmod>2019-06-07T19:52:39+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/download-and-install-autohotkey-tutorial.html</loc>
-  <lastmod>2019-06-07T19:52:39+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/writing-your-first-autohotkey-script-tutorial.html</loc>
-  <lastmod>2019-07-05T23:52:02+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:06+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/autohotkey-basics-tutorial.html</loc>
-  <lastmod>2019-06-08T18:56:51+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/autohotkey-hotstring-tutorial.html</loc>
-  <lastmod>2019-06-18T23:51:54+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/autohotkey-click-and-scroll-tutorial.html</loc>
-  <lastmod>2019-06-19T18:27:31+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/autohotkey-variable-basics.html</loc>
-  <lastmod>2019-06-22T18:43:29+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:05+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/autohotkey-clipboard-and-strreplace-tutorial.html</loc>
-  <lastmod>2019-07-06T00:52:44+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/autohotkey-expressions-tutorial.html</loc>
-  <lastmod>2019-08-15T18:30:50+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/autohotkey-if-statements-tutorial.html</loc>
-  <lastmod>2019-10-10T02:46:28+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mturkguide.com/autohotkey-loops-tutorial.html</loc>
-  <lastmod>2019-10-10T02:49:47+00:00</lastmod>
+  <lastmod>2020-08-11T20:08:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
