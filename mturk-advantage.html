@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/bulma.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/mturkadvantage.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="js/jquery-3.4.0.min.js"></script>
     <script defer src="js/contact_form.js"></script>
@@ -117,73 +118,115 @@
     })();
   </script>
 
-<!-- Breadcrumb -->
-
-<section class="section">
-  <div class="container">
-      <nav class="breadcrumb add-extra-padding-top" aria-label="breadcrumbs">
-          <ul>
-              <li><a href="index.html">Home</a></li>
-              <li class="is-active"><a href="#" aria-current="page">Mturk Advantage</a></li>
-          </ul>
-      </nav>
+<!-- Content -->
+<section id="hero-form-wrapper" class=hero-form-wrapper>
+  <div class="hero-with-form">
+    <div class="columns" style="margin-top: 1.5em;">
+      <div class="column is-half">
+        <div class="hero-title-container">
+          <h1 class="hero-title">Mturk Advantage</h1>
+          <p class="hero-description">A better way of grabbing HITs. Give yourself an edge over other turkers.</h1></p><br>
+            <button onclick="location.href='#icon-container'" class="button is-primary is-inverted is-outlined is-large">Learn More</button>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div id="hero-form-container" class="hero-form-container">
+          <div id="after_submit"></div>
+              <form id="contact_form" class="hero" action="#" method="POST" enctype="multipart/form-data">
+                <div class="form-title">
+                  <h1>Request a trial today!</h1>
+                </div>
+                  <div class="field">
+                      <div class="control">
+                          <label class="required label" for="name">Your name:</label>
+                          <input id="name" class="input is-medium" name="name" type="text" placeholder="Name" /><br />
+                          <span id="name_validation" class="error_message"></span>
+                  </div></div>
+                  <div class="field">
+                      <div class="control">
+                          <label class="required label" for="email">Your email:</label>
+                          <input id="email" class="input is-medium" name="email" type="text" placeholder="me@example.com" /><br />
+                          <span id="email_validation" class="error_message"></span>
+                  </div></div>
+                  <div class="field">
+                      <div class="control">
+                          <label class="required label" for="message">Short summary of your Mturk experience:</label>
+                          <textarea id="message" class="textarea" name="message" placeholder="Message"></textarea><br />
+                          <span id="message_validation" class="error_message"></span>
+                  </div></div>
+                  <input id="submit_button" type="submit" value="Send" />
+              </form>
+        </div>  
+      </div>
+    </div>
   </div>
 </section>
-
-<!-- Content -->
 
 <section class="section has-background-grey-lighter add-flex no-padding-top">
-  <div class="container">
-    <div>
-      <h1 class="title has-text-centered">Mturk Advantage</h1>
-      <p class="subtitle has-text-centered has-text-weight-semibold">A better way of grabbing HITs. Give yourself an edge over other turkers.</p>
-      <div class="columns mturk-advantage" style="margin-top: 1.5em;">
-        <div class="column is-half">
-          <p>Mturk Advantage is an application I created with the goal maximizing my personal turking efficiency. While the various free tools that are currently available are very helpful, their existence is a double edged sword. With thousands of people having installed these scripts, using them to grab HITs as soon as they are posted, the competition to get good HITs has become incredibly high. I needed something to give me an edge.</p>
-          </br>
-          <p>I finished an initial version of Mturk Advantage in early 2018 and with the help of a group of experienced turkers have been gradually improving it. At this point I am confident it would help most turkers significantly improve their earning potential while simultaneously easing some of the inconveniences that come with being a turker.</p>
-          </br>
-          <p>Unlike most turking tools, Mturk Advantage isn't a script you plug into a browser, but is a standalone application. It requires Windows and the Chrome browser to run (sorry Mac users.) I am offering MA as a service for the price of $25 a month. While this may understandably sound steep -- for serious turkers it will pay for itself and more. I don't expect people to take my word for it however, and so I am offering a two week trial period so you can see if it will be worthwhile for you.</p>
-        </div>
-        <div class="column is-half">
-          <figure class="image is-3by2">
-            <img src="images/Mturk_Advantage.png" alt="A screenshot of Mturk Advantage.">
-          </figure>
-        </div>
+  <div id="icon-container" class="columns icon-container" style="margin-top: 3em;">
+    <div class="column is-one-quarter">
+      <span class="fa-stack fa-4x">
+        <i class="fa fa-circle fa-stack-2x icon-background" style="color:white;"></i>
+        <i class="fa fa-dollar-sign fa-stack-1x"></i>
+      </span>
+      <p class="icon-section-header">Grab Better HITs</p>
+      <p class="icon-section-description">Auto accept HITs based on customized criteria.</p>
     </div>
-    <div class="mturk-advantage">
-      <p>Due to the nature of tools like this, the more people who have access the less effective they will be. For this reason I plan on limiting the number of concurrent users. If you're interested in learning more and potentially giving Mturk Advantage a try send me a message using the contact form found below. If no slots are currently available you will be added to a waiting list.</p>
+    <div class="column is-one-quarter">
+      <span class="fa-stack fa-4x">
+        <i class="fa fa-circle fa-stack-2x icon-background" style="color:white;"></i>
+        <i class="fa fa-bolt fa-stack-1x"></i>
+      </span>
+      <p class="icon-section-header">Work Faster</p>
+      <p class="icon-section-description">More working and less waiting for HITs.</p>
     </div>
-    <div class="centered-form">
-      <div class="form-heading">
-        <h1 class="title has-text-centered" style="margin-bottom: 1em;">Request a trial today!</h1>
+    <div class="column is-one-quarter">
+      <span class="fa-stack fa-4x">
+        <i class="fa fa-circle fa-stack-2x icon-background" style="color:white;"></i>
+        <i class="fa fa-coffee fa-stack-1x"></i>
+      </span>
+      <p class="icon-section-header">More Convenient</p>
+      <p class="icon-section-description">Spend less time staring at eye straining HIT tables.</p>
+    </div>
+    <div class="column is-one-quarter">
+      <span class="fa-stack fa-4x">
+        <i class="fa fa-circle fa-stack-2x icon-background" style="color:white;"></i>
+        <i class="fa fa-fighter-jet fa-stack-1x"></i>
+      </span>
+      <p class="icon-section-header">Streamlined</p>
+      <p class="icon-section-description">Everything you need on one page.</p>
+    </div>
+  </div>
+  <div id="info-container" class="info-container">
+    <div class="columns">
+      <div class="column is-half">
+        <h1 class="info-container-header">What is <span style="color: orangered;">Mturk Advantage?</span></h1>
+        <p>Mturk Advantage is an application I created with the goal maximizing my personal turking efficiency. While the various free tools that are currently available are very helpful, their existence is a double edged sword. With thousands of people having installed these scripts, using them to grab HITs as soon as they are posted, the competition to get good HITs has become incredibly high. I needed something to give me an edge.</p></br>
+        <p>I finished an initial version of Mturk Advantage in early 2018 and with the help of a group of experienced turkers have been gradually improving it. At this point I am confident it would help most turkers significantly improve their earning potential while simultaneously easing some of the inconveniences that come with being worker on Mechanical Turk.</p>
       </div>
-      <div id="after_submit"></div>
-          <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
-              <div class="field">
-                  <div class="control">
-                      <label class="required label" for="name">Your name:</label>
-                      <input id="name" class="input is-medium" name="name" type="text" placeholder="Name" /><br />
-                      <span id="name_validation" class="error_message"></span>
-              </div></div>
-              <div class="field">
-                  <div class="control">
-                      <label class="required label" for="email">Your email:</label>
-                      <input id="email" class="input is-medium" name="email" type="text" placeholder="me@example.com" /><br />
-                      <span id="email_validation" class="error_message"></span>
-              </div></div>
-              <div class="field">
-                  <div class="control">
-                      <label class="required label" for="message">Short summary of your Mturk experience:</label>
-                      <textarea id="message" class="textarea" name="message" placeholder="Message"></textarea><br />
-                      <span id="message_validation" class="error_message"></span>
-              </div></div>
-              <input id="submit_button" type="submit" value="Send" />
-          </form>
-    </div>  
+      <div class="column is-half">
+        <figure class="d1 image is-2by1">
+          <img src="images/ma-scraper2.png" alt="A screenshot of Mturk Advantage.">
+        </figure>
+      </div>
+    </div>
+    <div class="columns" style="margin-top: 6em;">
+      <div class="column is-half">
+        <figure class="d1 image is-2by1">
+          <img src="images/ma-panda2.png" alt="A screenshot of Mturk Advantage.">
+        </figure>
+      </div>
+      <div class="column is-half">
+        <h1 class="info-container-header">How do I <span style="color: orangered;">get started?</span></h1>
+        <p>Unlike most turking tools, Mturk Advantage isn't a script you plug into a browser, but is a standalone application. It requires Windows and the Chrome browser to run (sorry Mac users.) I am offering MA as a service for the price of $25 a month. While this may understandably sound steep -- for serious turkers it will pay for itself and more. I don't expect people to take my word for it however, and so I am offering a two week trial period so you can see if it will be worthwhile for you.</p></br>
+        <p>Due to the nature of tools like this, the more people who have access the less effective they will be. For this reason I plan on limiting the number of concurrent users. If you're interested in learning more and potentially giving Mturk Advantage a try send me a message using the contact form found above. If no slots are currently available you will be added to a waiting list.</p>
+      </div>
+    </div>
+  </div>
+  <div class="apply-button-container">
+    <a class="apply-button" href="#hero-form-wrapper">Request a Free Trial!</a>
   </div>
 </section>
-
 
 <!-- Footer -->
 

@@ -84,6 +84,7 @@ input, textarea{
 } */
 
 #contact_form{
+    max-width: 650px;
 	height: 450px;
     background-color: rgb(53, 53, 53);
     border: solid 2px white;
@@ -150,14 +151,4 @@ label.required:after {
   font-style: italic;
   font-weight: bold;
   font-size: 10px;
-}
-
-.mturk-advantage p {
-    font-size: 17px;
-}
-
-.centered-form {
-    max-width: 500px;
-    margin: auto;
-    margin-top: 2em;
 }

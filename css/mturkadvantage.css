@@ -1,0 +1,150 @@
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.centered-form {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.hero-form-wrapper {
+    margin-top: 28px;
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-with-form {
+    background-image: url(../images/gradient-2.jpg);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-title-container {
+    margin-top: 200px;
+    align-self: flex-end;
+    text-align: center;
+    color: white;
+}
+
+.hero-title {
+    font-size: 50px;
+    font-family: 'Lato', sans-serif;
+}
+
+.hero-description {
+    margin-top: .5em;
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.hero-form-container {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.form-title {
+    font-size: 38px;
+    margin-bottom: 16px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+#contact_form.hero{
+    height: 520px;
+    max-width: 680px;
+    margin: 0 2em 2em 2em;
+}
+
+.icon-container {
+    text-align: center;
+    padding-right: 3.5em;
+    padding-left: 3.5em;
+}
+
+.icon-section-header {
+    margin-top: .5em;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.icon-section-description {
+    margin-top: .5em;
+    font-size: 18px;
+}
+
+.info-container {
+    font-size: 20px;
+    margin-top: 7em;
+    padding-right: 3.5em;
+    padding-left: 3.5em;
+}
+
+.info-container-header {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 38px;
+}
+
+.d2 {
+    display: none;
+}
+.apply-button-container {
+    width: 100%;
+    margin-top: 4em;
+    display: flex;
+}
+
+.apply-button {
+    margin: 0 auto;
+    color: #ffdd57;
+    background-color: #363636;
+    display:inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 26px;
+}
+
+.apply-button:hover {
+    color: white;
+    border: white;
+    border: 0.1em ridge #FFFFFF;
+}
+
+.apply-button:active {
+    border: 0.1em ridge #FFFFFF;
+}
+
+.apply-button:visited {
+    color: white;
+}
+
+.d1 {
+    border: 1px solid #021a40;
+}
+
+@media only screen and (max-width: 650px) {
+    .d1 {
+        display: none;
+    }
+
+    .info-container-header {
+        font-size: 26px;
+    }
+
+    .info-container {
+        font-size: 16px;
+        margin-top: 3em;
+    }
+  }
