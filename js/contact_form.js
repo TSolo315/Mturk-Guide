@@ -50,7 +50,8 @@ $(document).ready(function(){
             $.ajax({
                 url: "https://work-horse.tsolodev.workers.dev/",
                 data,
-                type: 'post',
+                dataType: "json",
+                type: "POST",
                 success: function() {
                     var message = 'Your message was sent.';
                     $('#after_submit').html(message);
