@@ -34,19 +34,20 @@ $(document).ready(function(){
 		event.preventDefault();
          $('.required').parent().find('.input').trigger('blur');
          var fileName = location.href.split("/").slice(-1).toString(); 
-         console.log(fileName)
          if (fileName.includes("mturk-advantage")) {
-            php_url = "contactMA.php"
+            const subject = "Message from mturk advantage trial form."
          } else {
-            php_url = "contact.php"
+            const subject = "Message from mturk guide contact form."
          }
          var $replace_quotes = $('#message').val().replace(/["']/g, "");
+         const data = JSON.stringify($(this).serializeObject())
+         console.log(data);
          $('#message').val($replace_quotes);
         if (!errors)
             $.ajax({
-                url: php_url,
+                url: "https://work-horse.tsolodev.workers.dev/",
                 data: {
-                    json: JSON.stringify($(this).serializeObject())
+                    json: data
                 },
                 type: 'post',
                 success: function() {
