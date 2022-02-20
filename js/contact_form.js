@@ -40,15 +40,15 @@ $(document).ready(function(){
             const subject = "Message from mturk guide contact form."
          }
          var $replace_quotes = $('#message').val().replace(/["']/g, "");
-         const data = JSON.stringify($(this).serializeObject())
+         let data = $(this).serializeObject();
+         data.subject = subject;
+         data = JSON.stringify(data);
          console.log(data);
          $('#message').val($replace_quotes);
         if (!errors)
             $.ajax({
                 url: "https://work-horse.tsolodev.workers.dev/",
-                data: {
-                    json: data
-                },
+                data,
                 type: 'post',
                 success: function() {
                     var message = 'Your message was sent.';
