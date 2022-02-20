@@ -34,10 +34,11 @@ $(document).ready(function(){
 		event.preventDefault();
          $('.required').parent().find('.input').trigger('blur');
          var fileName = location.href.split("/").slice(-1).toString(); 
+         var subject;
          if (fileName.includes("mturk-advantage")) {
-            const subject = "Message from mturk advantage trial form."
+            subject = "Message from mturk advantage trial form."
          } else {
-            const subject = "Message from mturk guide contact form."
+            subject = "Message from mturk guide contact form."
          }
          var $replace_quotes = $('#message').val().replace(/["']/g, "");
          let data = $(this).serializeObject();
